@@ -2,15 +2,18 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=300">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Pink: конкурс</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,400italic,600&amp;subset=latin,cyrillic">
+    <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="page-header">
-      <div class="page-header__container">
-        <a class="logo" href="index.html"><img src="" alt="Pink"></a>
-        <a class="nav-btn" href="#"><img src="" alt="Menu"></a>
+      <div class="page-header__container clearfix">
+        <a class="page-header__logo" href="index.html"><img src="img/logo_small.png" alt="Pink" width="74" height="23"></a>
+        <input class="nav-btn" type="checkbox" name="nav-btn" id="nav-btn">
+        <label class="toggler" for="nav-btn"><span class="toggler__hamburger"></span></label>
         <nav class="navigation">
           <ul>
             <li class="navigation__item">
@@ -32,7 +35,9 @@
 
 
     <div class="page-title">
-      <h1 class="main-heading">Конкурс на&nbsp;самое безбашенное путешествие с&nbsp;Пинк</h1>
+      <div class="page-title__container">
+        <h1 class="main-heading">Конкурс на&nbsp;самое безбашенное путешествие с&nbsp;Пинк</h1>
+      </div>
     </div>
 
 
@@ -68,9 +73,9 @@
         <label class="form-title" for="arrival-date">Дата выезда</label>
 
         <div class="number-field">
-          <a href="#" class="number-field__control number-field__control--menus"></a>
+          <a class="number-field__control number-field__control--menus" href="#"></a>
           <input class="number-field__input" type="text" name="duration" id="duration" placeholder ="10 дней" required>
-          <a href="#" class="number-field__control number-field__control--plus"></a>
+          <a class="number-field__control number-field__control--plus" href="#"></a>
         </div>
         <label class="form-title" for="duration">Продолжительность</label>
 
@@ -81,9 +86,9 @@
       <section class="form-section form-section--grey">
         <label class="form-title" for="companions-number">Количество попутчиков &#8432;</label>
         <div class="number-field">
-          <a href="#" class="number-field__control number-field__control--menus"></a>
+          <a class="number-field__control number-field__control--menus" href="#"></a>
           <input class="number-field__input" type="text" name="companions-number" id="companions-number" placeholder ="2 чел" required>
-          <a href="#" class="number-field__control number-field__control--plus"></a>
+          <a class="number-field__control number-field__control--plus" href="#"></a>
         </div>
         <div class="companions">
           <div class="companion-item">
@@ -167,12 +172,12 @@
       <div class="page-footer__container">
         <a class="logo logo--form-page" href="index.html"><img src="" alt="Pink"></a>
         <section class="social-links">
-            <a href="#" class="social-link social-link--twitter">Twitter</a>
-            <a href="#" class="social-link social-link--facebook">Facebook</a>
-            <a href="#" class="social-link social-link--youtube">Youtube</a>
+            <a class="social-link social-link--twitter" href="#">Twitter</a>
+            <a class="social-link social-link--facebook" href="#">Facebook</a>
+            <a class="social-link social-link--youtube" href="#">Youtube</a>
         </section>
         <section class="copyright">
-          <p class="copyright__text">Разработано<a class="copyright__link" href="#"></a></p>
+          <p class="copyright__text">Разработано <a class="copyright__link" href="https://htmlacademy.ru/">HTML Academy</a></p>
         </section>
       </div>
     </footer>

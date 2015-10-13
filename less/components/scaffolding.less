@@ -1,0 +1,85 @@
+html {
+  font-size: @html-size--base;
+}
+
+body {
+  position: relative;
+  max-width: 320px;
+  text-align: center;
+  font-family: @font-family--base;
+  font-size: @font-size;
+  line-height: @line-height--base;
+  background-color: @bg--white;
+  color: @grey--dark;
+}
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+a {
+  color: @pink;
+  text-decoration: none;
+}
+p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.base-link {
+  font-weight: 400;
+  color: @pink;
+  text-decoration: underline;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.base-list {
+  text-align: left;
+
+  &__item {
+    position: relative;
+    padding-left: 21px;
+  }
+
+  &__item::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: -14px;
+    display: block;
+    width: 6px;
+    height: 6px;
+    background-color: @pink;
+    border-radius: 100%;
+  }
+}
+
+.base-blockquote {
+  padding-left: 20px;
+  text-align: left;
+  border-left: 2px solid @pink;
+
+  & blockquote {
+    margin: 0;
+  }
+
+  & cite {
+    font-style: italic;
+    color: @grey--light;
+  }
+}
+
+.main-heading {
+  margin-top: 20px;
+  margin-bottom: 31px;
+  font-size: @font-size--h1;
+  font-weight: (@font-weight--base - 100);
+  line-height: @line-height--h1;
+}
