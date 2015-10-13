@@ -2,15 +2,18 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=300">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Pink</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,400italic,600&amp;subset=latin,cyrillic">
+    <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="page-header">
-      <div class="page-header__container">
-        <a class="logo" href="index.html"><img src="" alt="Pink"></a>
-        <a class="nav-btn" href="#"><img src="" alt="Menu"></a>
+      <div class="page-header__container clearfix">
+        <a class="page-header__logo" href="index.html"><img src="img/logo_small.png" alt="Pink" width="74" height="23"></a>
+        <input class="nav-btn" type="checkbox" name="nav-btn" id="nav-btn">
+        <label class="toggler" for="nav-btn"><span class="toggler__hamburger"></span></label>
         <nav class="navigation">
           <ul>
             <li class="navigation__item">
@@ -32,40 +35,51 @@
 
 
     <div class="page-title">
-      <h1 class="main-heading">Взгляните на&nbsp;жизнь иначе!</h1>
+      <div class="page-title__container">
+        <h1 class="main-heading">Взгляните на&nbsp;жизнь иначе!</h1>
+      </div>
+      <div class="page-title__image"><img src="img/page-title_iphone-hand.png" alt="" width="100%" height="auto"></div>
     </div>
 
 
     <section class="download-app">
       <div class="download-app__container">
         <a class="btn btn--download" href="#">Скачать приложение</a>
-        <div class="platforms">
-          <div class="platform platform--Apple"><a href=""></a></div>
-          <div class="platform platform--Android"><a href=""></a></div>
-          <div class="platform platform--Windows"><a href=""></a></div>
+        <div class="download-app__platforms">
+          <div class="platform platform--Apple"></div>
+          <div class="platform platform--Android"></div>
+          <div class="platform platform--Windows"></div>
         </div>
-        <p>Доступно для iPhone, iPad, Android, Windows Phone, OS&nbsp;X, Windows&nbsp;8</p>
+        <p class="download-app__description">Доступно для iPhone, iPad, Android, Windows Phone, OS&nbsp;X, Windows&nbsp;8</p>
       </div>
     </section>
 
 
     <section class="features">
-      <div class="features__container">
-        <div class="features-title">
+      <div class="features-title">
+        <div class="features__container">
           <h1 class="main-heading">Устали от&nbsp;серости мегаполиса?</h1>
           <h1 class="main-heading">Нам есть, что вам предложить!</h1>
         </div>
-        <div class="features-item">
-          <h2 class="features-item__title">Поднимает настроение</h2>
-          <p class="features-item__text">Приложение позволит вам победить осеннюю хандру и&nbsp;деперессию буквально в&nbsp;несколько кликов!</p>
-        </div>
-        <div class="features-item">
-          <h2 class="features-item__title">Меняет мир вокруг</h2>
-          <p class="features-item__text">Сделайте снимок и&nbsp;украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
-        </div>
-        <div class="features-item">
-          <h2 class="features-item__title">Заводит новых друзей</h2>
-          <p class="features-item__text">Ставьте лайки, комментируте, делитесь фотографиями с&nbsp;друзьями и&nbsp;заводите новых</p>
+      </div>
+
+      <div class="features__items">
+        <div class="features__container">
+          <div class="features-item">
+            <h2 class="features-item__title">Поднимает настроение</h2>
+            <p class="features-item__text">Приложение позволит вам победить осеннюю хандру и&nbsp;деперессию буквально в&nbsp;несколько кликов!</p>
+          </div>
+          <div class="features-item">
+            <h2 class="features-item__title">Меняет мир вокруг</h2>
+            <p class="features-item__text">Сделайте снимок и&nbsp;украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+          </div>
+          <div class="features-item">
+            <h2 class="features-item__title">Заводит новых друзей</h2>
+            <p class="features-item__text">Ставьте лайки, комментируте, делитесь фотографиями с&nbsp;друзьями и&nbsp;заводите новых</p>
+          </div>
+          <div class="features__image">
+            <img src="img/features_iphone-screen.png" alt="" width="157" height="320">
+          </div>
         </div>
       </div>
     </section>
@@ -74,15 +88,15 @@
     <section class="reviews">
       <div class="reviews__container">
         <div class="slider-reviews">
-          <article class="reviews-item">
+          <article class="reviews-item reviews-item--1">
             <h2 class="reviews-item__title">Николай Петров</h2>
             <p class="reviews-item__text">&laquo;Это приложение перевернуло мой мир и&nbsp;позволило по-новому взглянуть на&nbsp;привычные серые вещи! А&nbsp;ещё я&nbsp;познакомился со&nbsp;своей будущей женой в&nbsp;комментариях к&nbsp;выложенной фотографии!&raquo;</p>
           </article>
-          <article class="reviews-item">
+          <article class="reviews-item reviews-item--2">
             <h2 class="reviews-item__title">Николай Петров</h2>
             <p class="reviews-item__text">&laquo;Это приложение перевернуло мой мир и&nbsp;позволило по-новому взглянуть на&nbsp;привычные серые вещи! А&nbsp;ещё я&nbsp;познакомился со&nbsp;своей будущей женой в&nbsp;комментариях к&nbsp;выложенной фотографии!&raquo;</p>
           </article>
-          <article class="reviews-item">
+          <article class="reviews-item reviews-item--3">
             <h2 class="reviews-item__title">Николай Петров</h2>
             <p class="reviews-item__text">&laquo;Это приложение перевернуло мой мир и&nbsp;позволило по-новому взглянуть на&nbsp;привычные серые вещи! А&nbsp;ещё я&nbsp;познакомился со&nbsp;своей будущей женой в&nbsp;комментариях к&nbsp;выложенной фотографии!&raquo;</p>
           </article>
@@ -97,54 +111,57 @@
 
 
     <section class="price">
-      <div class="price__container">
-        <div class="slider-price">
-          <div class="price-item">
-            <div class="price-item__header">
-              <p class="price-item__title">База</p>
-              <p class="price-item__cost">1,99 USD</p>
-            </div>
-            <ul>
-              <li>Розовый фильтр</li>
-              <li>Смайлики</li>
-              <li>Комментарии</li>
-            </ul>
-          </div>
-          <div class="price-item">
-            <div class="price-item__header">
-              <p class="price-item__title">Стандарт</p>
-              <p class="price-item__cost">3,99 USD</p>
-            </div>
-            <ul>
-              <li>Розовый фильтр</li>
-              <li>Смайлики</li>
-              <li>Комментарии</li>
-            </ul>
-          </div>
-          <div class="price-item">
-            <div class="price-item__header">
-              <p class="price-item__title">Анлим</p>
-              <p class="price-item__cost">9,99 USD</p>
-            </div>
-            <ul>
-              <li>Розовый фильтр</li>
-              <li>Смайлики</li>
-              <li>Комментарии</li>
-            </ul>
-          </div>
-          <div class="slider-pagination">
-            <a class="slider-pagination__control slider-pagination__control--active" href=""></a>
-            <a class="slider-pagination__control" href=""></a>
-            <a class="slider-pagination__control" href=""></a>
-          </div>
+      <div class="slider-price">
+        <table class="price-table">
+          <tr>
+            <td class="price-table__header">
+              <div class="price-table__flag">Хит</div>
+              <p class="price-table__title">База</p>
+              <p class="price-table__cost">1,99 USD</p>
+            </td>
+            <td class="price-table__header">
+              <div class="price-table__flag price-table__flag--hit">Хит</div>
+              <p class="price-table__title">Стандарт</p>
+              <p class="price-table__cost">3,99 USD</p>
+            </td>
+            <td class="price-table__header">
+              <div class="price-table__flag">Хит</div>
+              <p class="price-table__title">Анлим</p>
+              <p class="price-table__cost">9,99 USD</p>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="price-table__service price-table__service--yes">Розовый фильтр</td>
+            <td class="price-table__service price-table__service--yes">Розовый фильтр</td>
+            <td class="price-table__service price-table__service--yes">Розовый фильтр</td>
+          </tr>
+
+          <tr>
+            <td class="price-table__service price-table__service--no">Смайлики</td>
+            <td class="price-table__service price-table__service--yes">Смайлики</td>
+            <td class="price-table__service price-table__service--yes">Смайлики</td>
+          </tr>
+
+          <tr>
+            <td class="price-table__service price-table__service--no">Комментарии</td>
+            <td class="price-table__service price-table__service--no">Комментарии</td>
+            <td class="price-table__service price-table__service--yes">Комментарии</td>
+          </tr>
+        </table>
+
+        <div class="slider-pagination">
+          <a class="slider-pagination__control" href=""></a>
+          <a class="slider-pagination__control slider-pagination__control--active" href=""></a>
+          <a class="slider-pagination__control" href=""></a>
         </div>
       </div>
     </section>
 
 
     <footer class="page-footer">
-      <div class="page-footer__container">
-        <div class="contacts">
+      <div class="contacts">
+        <div class="contacts__container">
           <h1 class="main-heading">Остались вопросы? Свяжитесь с нами!</h1>
           <div class="contacts-item">
             <h2 class="contacts-item__title">Звоните:</h2>

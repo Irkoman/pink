@@ -1,0 +1,87 @@
+.page-header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding-top: 22px;
+  padding-bottom: 15px;
+  color: @text--white;
+  background-color: @bg--dark;
+  background-color: hsla(213, 26%, 15%, 0.5);
+
+  &__container {
+
+    width: @width-container;
+    margin: auto;
+  }
+
+  &__logo {
+  float: left;
+  }
+}
+
+.toggler {
+  float: right;
+  display: flex;
+  align-items: center;
+  width: 50px;
+  height: 24px;
+  user-select: none;
+  cursor: pointer;
+}
+
+.toggler__hamburger {
+  position: relative;
+  width: 100%;
+  height: 4px;
+  background: @bg--white;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: @bg--white;
+  }
+
+  &::before {
+    top: 10px;
+  }
+
+  &::after {
+    top: -10px;
+  }
+}
+
+.nav-btn {
+  display: none;
+}
+
+.nav-btn:checked ~ .navigation {
+  display: block;
+}
+
+.navigation {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  border-top: 1px solid #000000;
+  background-color: @grey--dark;
+
+  &__item {
+    border-bottom: 1px solid #000000;
+  }
+
+  &__link {
+    display: block;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-weight: 700;
+    border-top: 1px solid #485461;
+    color: @text--white;
+    text-transform: uppercase;
+  }
+}

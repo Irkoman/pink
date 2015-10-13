@@ -2,15 +2,18 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=300">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Pink: блог</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,400italic,600&amp;subset=latin,cyrillic">
+    <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="page-header">
-      <div class="page-header__container">
-        <a class="logo" href="index.html"><img src="" alt="Pink"></a>
-        <a class="nav-btn" href="#"><img src="" alt="Menu"></a>
+      <div class="page-header__container clearfix">
+        <a class="page-header__logo" href="index.html"><img src="img/logo_small.png" alt="Pink" width="74" height="23"></a>
+        <input class="nav-btn" type="checkbox" name="nav-btn" id="nav-btn">
+        <label class="toggler" for="nav-btn"><span class="toggler__hamburger"></span></label>
         <nav class="navigation">
           <ul>
             <li class="navigation__item">
@@ -32,28 +35,30 @@
 
 
     <div class="page-title">
-      <h1 class="main-heading">Блог путешественников, пользователей Пинк</h1>
+      <div class="page-title__container">
+        <h1 class="main-heading">Блог путешественников, пользователей Пинк</h1>
+      </div>
     </div>
 
 
     <div class="blog">
       <article class="post-preview">
-        <a href="post.html" class="post-preview__link">Антон и&nbsp;Надя в&nbsp;Таиланде</a>
+        <a class="post-preview__link" href="post.html">Антон и&nbsp;Надя в&nbsp;Таиланде</a>
         <time class="date">Опубликовано: 6&nbsp;месяцев назад</time>
         <p class="post-preview__description">Читайте рассказ о&nbsp;том, как семейная пара посещала Тайланд, стараясь максимально избегать избитых туристических мест и&nbsp;районов.</p>
       </article>
       <article class="post-preview">
-        <a href="#" class="post-preview__link">Гастрольный тур &laquo;Кубанских борщеваров&raquo;</a>
+        <a class="post-preview__link" href="#">Гастрольный тур &laquo;Кубанских борщеваров&raquo;</a>
         <time class="date">Опубликовано: 5&nbsp;лет назад</time>
         <p class="post-preview__description">Возрождение культурных традиций уже не&nbsp;за&nbsp;горами. Фолк-металл-рэп-группа из&nbsp;столицы Кубани провела весь год в&nbsp;гастролях по&nbsp;России и&nbsp;ближнему (а&nbsp;также среднему) зарубежью.</p>
       </article>
       <article class="post-preview">
-        <a href="#" class="post-preview__link">Чета Болонских в&nbsp;Париже</a>
+        <a class="post-preview__link" href="#">Чета Болонских в&nbsp;Париже</a>
         <time class="date">Опубликовано: 100 лет назад</time>
         <p class="post-preview__description">Невероятные приключения русских во&nbsp;Франции. Интриги, предательства, погони&nbsp;и, разумеется, убийства. Читайте криминально-исторический трактат в&nbsp;двух томах.</p>
       </article>
       <article class="post-preview">
-        <a href="#" class="post-preview__link">Путешествие на&nbsp;яхте сеньора Христофора</a>
+        <a class="post-preview__link" href="#">Путешествие на&nbsp;яхте сеньора Христофора</a>
         <time class="date">Опубликовано: 523 года назад</time>
         <p class="post-preview__description">Группа испанцев отдыхала на&nbsp;яхте, но&nbsp;они даже не&nbsp;представляли, какие открытия ждут их&nbsp;впереди и&nbsp;чем это обернётся для всего человечества!</p>
       </article>
@@ -71,12 +76,12 @@
       <div class="page-footer__container">
         <a class="logo logo--form-page" href="index.html"><img src="" alt="Pink"></a>
         <section class="social-links">
-            <a href="#" class="social-link social-link--twitter">Twitter</a>
-            <a href="#" class="social-link social-link--facebook">Facebook</a>
-            <a href="#" class="social-link social-link--youtube">Youtube</a>
+            <a class="social-link social-link--twitter" href="#">Twitter</a>
+            <a class="social-link social-link--facebook" href="#">Facebook</a>
+            <a class="social-link social-link--youtube" href="#">Youtube</a>
         </section>
         <section class="copyright">
-          <p class="copyright__text">Разработано<a class="copyright__link" href="#"></a></p>
+          <p class="copyright__text">Разработано <a class="copyright__link" href="https://htmlacademy.ru/">HTML Academy</a></p>
         </section>
       </div>
     </footer>
