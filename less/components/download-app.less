@@ -3,8 +3,8 @@
   background-color: @bg--dark;
 
   &__container {
-    width: @width-container;
-    margin: 0 auto;
+    .container();
+
     padding-top: 28px;
     padding-bottom: 21px;
   }
@@ -20,9 +20,11 @@
 .platform {
     display: inline-block;
     vertical-align: middle;
+    text-align: left;
     width: 47px;
     height: 60px;
-    margin-right: 30px;
+    margin-left: 4%;
+    margin-right: 4%;
     background-image: url("../img/sprite.png");
 
   &:last-child {
