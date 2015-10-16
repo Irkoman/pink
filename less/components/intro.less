@@ -1,0 +1,28 @@
+.intro {
+  position: relative;
+
+
+  &__image {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 0;
+    bottom: 250px;
+
+    @media (min-width: @screen_tablet) {
+      left: 50%;
+      bottom: 0;
+    }
+  }
+
+  @media (min-width: @screen_tablet) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 3%;
+    background: @bg--dark url("../img/bg_page-title.jpg") 100% no-repeat;
+    background-size: cover;
+  }
+
+}
+

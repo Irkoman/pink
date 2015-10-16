@@ -1,0 +1,28 @@
+.proof {
+  display: none;
+  font-size: @font-size;
+  line-height: @line-height--base;
+  background: @bg--white;
+
+  @media (min-width: @screen_tablet) {
+    display: block;
+  }
+
+  @media (min-width: @screen_desktop) {
+    font-size: @font-size--big;
+    background: @bg--grey;
+  }
+
+  &__container {
+
+    @media (min-width: @screen_tablet) {
+      max-width: 320px;
+      margin-right: 3%;
+    }
+  }
+
+  &__title {
+    font-size: (@font-size--h1 + 0.375);
+    font-weight: (@font-weight--base + 300);
+  }
+}

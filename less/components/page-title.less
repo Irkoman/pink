@@ -1,31 +1,38 @@
 .page-title {
-  padding-top: 77px;
-  color: @text--white;
   background: @bg--dark url("../img/bg_page-title.jpg") 100% no-repeat;
   background-size: cover;
+  padding-bottom: 250px;
+  padding-top: 77px;
+  color: @text--white;
 
   &--main {
-  padding-top: 65px;
+    padding-top: 65px;
   }
 
   &__container {
     .container();
+    max-width: 320px;
   }
 
   &__heading {
+    position: relative;
     margin-top: 20px;
     padding-bottom: 56px;
+    z-index: 100;
+
+    @media (min-width: @screen_tablet) {
+      padding-bottom: 0;
+      font-size: 2.5rem;
+    }
   }
 
   &__heading--blog {
     padding-bottom: 44px;
   }
 
-  &__image {
-    width: 100%;
-    max-width: 320px;
-    max-height: 295px;
-    margin-top: -41px;
-    overflow: hidden;
+  @media (min-width: @screen_tablet) {
+    padding-top: 183px;
+    padding-bottom: 0;
+    background: none;
   }
 }

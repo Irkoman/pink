@@ -1,12 +1,16 @@
 .download-app {
+  position: relative;
+  z-index: 100;
+  font-weight: (@font-weight--base - 100);
   color: @text--white;
   background-color: @bg--dark;
+  padding-top: 28px;
+  padding-bottom: 21px;
+
 
   &__container {
     .container();
-
-    padding-top: 28px;
-    padding-bottom: 21px;
+    max-width: 320px;
   }
 
   &__platforms {
@@ -14,18 +18,29 @@
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 24px;
+
+    @media (min-width: @screen_tablet) {
+      margin-top: 43px;
+      margin-bottom: 34px;
+    }
+  }
+
+  @media (min-width: @screen_tablet) {
+    padding-top: 4px;
+    font-size: @font-size--big;
+    background: none;
   }
 }
 
 .platform {
-    display: inline-block;
-    vertical-align: middle;
-    text-align: left;
-    width: 47px;
-    height: 60px;
-    margin-left: 4%;
-    margin-right: 4%;
-    background-image: url("../img/sprite.png");
+  display: inline-block;
+  vertical-align: middle;
+  text-align: left;
+  width: 47px;
+  height: 60px;
+  margin-left: 4%;
+  margin-right: 4%;
+  background-image: url("../img/sprite.png");
 
   &:last-child {
     margin-right: 0;
