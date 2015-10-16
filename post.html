@@ -2,15 +2,18 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=300">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Антон и Надя в Таиланде</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,400italic,600&amp;subset=latin,cyrillic">
+    <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="page-header">
-      <div class="page-header__container">
-        <a class="logo" href="index.html"><img src="" alt="Pink"></a>
-        <a class="nav-btn" href="#"><img src="" alt="Menu"></a>
+      <div class="page-header__container clearfix">
+        <a class="page-header__logo" href="index.html"><img src="img/logo_small.png" alt="Pink" width="74" height="23"></a>
+        <input class="nav-btn" type="checkbox" name="nav-btn" id="nav-btn">
+        <label class="toggler" for="nav-btn"><span class="toggler__hamburger"></span></label>
         <nav class="navigation">
           <ul>
             <li class="navigation__item">
@@ -32,7 +35,9 @@
 
 
     <div class="page-title">
-      <h1 class="main-heading">Блог путешественников, пользователей Пинк</h1>
+      <div class="page-title__container">
+        <h1 class="main-heading">Блог путешественников, пользователей Пинк</h1>
+      </div>
     </div>
 
 
@@ -43,20 +48,22 @@
 
       <section class="post-rubric">
         <h2 class="post-rubric__subtitle">Предыстория</h2>
-        <p class="post-rubric__text">В&nbsp;Азию нам хотелось попасть уже давно, но&nbsp;все время что-то останавливало. Также не&nbsp;давал покоя вопрос гигиены и&nbsp;чистоты вокруг. Были сомнения и&nbsp;на&nbsp;счет местной еды. Однако, увидев выгодные билеты на&nbsp;<a class="inline-link" href="#">skyscanner.ru</a> мы&nbsp;все-таки решились!</p>
+        <p class="post-rubric__text">В&nbsp;Азию нам хотелось попасть уже давно, но&nbsp;все время что-то останавливало. Также не&nbsp;давал покоя вопрос гигиены и&nbsp;чистоты вокруг. Были сомнения и&nbsp;на&nbsp;счет местной еды. Однако, увидев выгодные билеты на&nbsp;<a class="base-link" href="#">skyscanner.ru</a> мы&nbsp;все-таки решились!</p>
       </section>
 
       <section class="post-rubric">
         <h2 class="post-rubric__subtitle">Выбор отеля</h2>
         <p class="post-rubric__text">В&nbsp;Таиланде огромный разброс по&nbsp;стоимости отелей и&nbsp;так&nbsp;же сильно отличаются и&nbsp;они сами. Так как достопримечательности щедро разбросаны по&nbsp;всей стране, то&nbsp;чтобы посетить их&nbsp;все, нужно пожить в&nbsp;нескольких разных городах. В&nbsp;итоге мы&nbsp;остановились на&nbsp;следующих:</p>
-        <ul class="list">
-          <li class="list__item">Point Yamu by&nbsp;Como (Пхукет)</li>
-          <li class="list__item">Amari Vogue Hotel (Краби)</li>
-          <li class="list__item">Photo Hotel (Пхукет)</li>
+        <ul class="base-list">
+          <li class="base-list__item">Point Yamu by&nbsp;Como (Пхукет)</li>
+          <li class="base-list__item">Amari Vogue Hotel (Краби)</li>
+          <li class="base-list__item">Photo Hotel (Пхукет)</li>
         </ul>
         <p>В&nbsp;выборе отелей мы&nbsp;учитывали как расположение, так и&nbsp;отзывы на&nbsp;Tripadvisor. Например, вот, что пишут люди про Point Yamu:</p>
-        <blockquote class="blockquote">Замечательное место,в которое хочется вернуться обязательно! Персонал отзывчивый и&nbsp;внимательный,еда-потрясающая. Отель расположен в&nbsp;тихом и&nbsp;уединенном месте-в чем вся и&nbsp;прелесть. СПА отличный. Потрясающие виды.</blockquote>
-        <cite class="cite">Олег, г. Москва</cite>
+        <div class="base-blockquote">
+          <blockquote>Замечательное место,в которое хочется вернуться обязательно! Персонал отзывчивый и&nbsp;внимательный,еда-потрясающая. Отель расположен в&nbsp;тихом и&nbsp;уединенном месте-в чем вся и&nbsp;прелесть. СПА отличный. Потрясающие виды.</blockquote>
+          <cite>Олег, г. Москва</cite>
+        </div>
       </section>
 
       <section class="post-rubric">
@@ -76,12 +83,12 @@
       <div class="page-footer__container">
         <a class="logo logo--form-page" href="index.html"><img src="" alt="Pink"></a>
         <section class="social-links">
-            <a href="#" class="social-link social-link--twitter">Twitter</a>
-            <a href="#" class="social-link social-link--facebook">Facebook</a>
-            <a href="#" class="social-link social-link--youtube">Youtube</a>
+            <a class="social-link social-link--twitter" href="#">Twitter</a>
+            <a class="social-link social-link--facebook" href="#">Facebook</a>
+            <a class="social-link social-link--youtube" href="#">Youtube</a>
         </section>
         <section class="copyright">
-          <p class="copyright__text">Разработано<a class="copyright__link" href="#"></a></p>
+          <p class="copyright__text">Разработано <a class="copyright__link" href="https://htmlacademy.ru/">HTML Academy</a></p>
         </section>
       </div>
     </footer>

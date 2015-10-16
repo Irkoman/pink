@@ -1,0 +1,40 @@
+.features {
+
+  &__container {
+    width: @width-container;
+    margin: auto;
+    padding-top: 22px;
+  }
+
+  &-title::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 36px;
+    background-image: linear-gradient(to right bottom, @bg--white 50%, @bg--grey 50%);
+  }
+
+  &__items {
+    padding-top: 8px;
+    background-color: @bg--grey;
+  }
+
+  &__image {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 41px;
+    width: 100%;
+    max-width: 157px;
+    max-height: 278px;
+    overflow: hidden;
+  }
+}
+
+.features-item {
+  margin-bottom: 30px;
+
+  &__title {
+    font-size: @font-size--h2;
+    color: #000000;
+  }
+}
