@@ -11,6 +11,10 @@ body {
   line-height: @line-height--base;
   background-color: @bg--white;
   color: @grey--dark;
+
+  @media (min-width: @screen_tablet) {
+    font-size: @font-size--big;
+  }
 }
 
 img {
@@ -37,6 +41,10 @@ h1 {
 h2 {
   font-size: @font-size--h2;
   color: #000000;
+
+  @media (min-width: @screen_desktop) {
+    font-size: 1.875rem;
+  }
 }
 
 a {

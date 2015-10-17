@@ -3,6 +3,7 @@
   font-size: @font-size;
   line-height: @line-height--base;
   background: @bg--white;
+  text-align: left;
 
   @media (min-width: @screen_tablet) {
     display: block;
@@ -18,11 +19,24 @@
     @media (min-width: @screen_tablet) {
       max-width: 320px;
       margin-right: 3%;
+      margin-left: auto;
+      padding: 100px 0;
+    }
+
+    @media (min-width: @screen_desktop) {
+      max-width: 570px;
+      margin-right: 10%;
+      margin-left: auto;
+      padding: 120px 0;
     }
   }
 
   &__title {
-    font-size: (@font-size--h1 + 0.375);
+    font-size: (@font-size--h2 + 0.75);
     font-weight: (@font-weight--base + 300);
+
+    @media (min-width: @screen_desktop) {
+      font-size: @font-size--h2;
+    }
   }
 }

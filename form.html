@@ -46,11 +46,11 @@
         <p class="form__description">Поделитесь своей историей и&nbsp;получите шанс выиграть ценный приз&nbsp;&mdash; 1000 миль на&nbsp;вашу бонусную карту!</p>
         <section class="form-section form-section--white">
           <label class="form__title form__title--name" for="name">Имя: &#8432;</label>
-          <input type="text" name="name" id="name" placeholder="Введите ваше имя" required>
+          <input class="form__input" type="text" name="name" id="name" placeholder="Введите ваше имя" required>
           <label class="form__title form__title--name" for="surname">Фамилия: &#8432;</label>
-          <input type="text" name="surname" id="surname" placeholder="Укажите фамилию" required>
+          <input class="form__input" type="text" name="surname" id="surname" placeholder="Укажите фамилию" required>
           <label class="form__title form__title--name" for="patronymic">Отчество</label>
-          <input type="text" name="patronymic" id="patronymic" placeholder="Ну и отчество тоже">
+          <input class="form__input" type="text" name="patronymic" id="patronymic" placeholder="Ну и отчество тоже">
         </section>
       </div>
 
@@ -59,13 +59,13 @@
           <p class="form__title">С&nbsp;каким приложением путешествовали? &#8432;</p>
           <ul class="user-plarform">
             <li>
-              <input type="radio" name="platform" value="Pink для iOS" id="iOS" checked><label class="user-plarform__item" for="iOS">Pink для iOS</label>
+              <input class="form__input form__input--radio" type="radio" name="platform" value="Pink для iOS" id="iOS" checked><label class="user-plarform__item" for="iOS">Pink для iOS</label>
             </li>
             <li>
-              <input type="radio" name="platform" value="Pink на Android" id="Android"><label class="user-plarform__item" for="Android">Pink на&nbsp;Android</label>
+              <input class="form__input form__input--radio" type="radio" name="platform" value="Pink на Android" id="Android"><label class="user-plarform__item" for="Android">Pink на&nbsp;Android</label>
             </li>
             <li>
-              <input type="radio" name="platform" value="Windows Phone" id="Windows"><label class="user-plarform__item" for="Windows">Windows Phone</label>
+              <input class="form__input form__input--radio" type="radio" name="platform" value="Windows Phone" id="Windows"><label class="user-plarform__item" for="Windows">Windows Phone</label>
             </li>
           </ul>
         </div>
@@ -74,17 +74,17 @@
       <section class="form-section form-section--white form-section--date">
         <div class="form__container">
           <p class="form__title form__title--general">Когда вы&nbsp;путешествовали? &#8432;</p>
-          <input type="text" name="arrival-date" id="arrival-date" placeholder="1 апреля 2015" required>
+          <input class="form__input form__input--date" type="date" name="arrival-date" id="arrival-date" placeholder="1 апреля 2015" required>
           <label class="form__title form__title--date" for="arrival-date">Дата выезда</label>
 
           <div class="number-field">
             <a class="number-field__control number-field__control--menus" href="">&ndash;</a>
-            <input class="number-field__input" type="text" name="duration" id="duration" placeholder ="10 дней" required>
+            <input class="form__input form__input--number" type="number" name="duration" id="duration" placeholder ="10 дней" required>
             <a class="number-field__control number-field__control--plus" href="">+</a>
           </div>
           <label class="form__title form__title--date" for="duration">Продолжительность</label>
 
-          <input type="text" name="leaving-date" id="leaving-date" placeholder="1 апреля 2015" required>
+          <input class="form__input form__input--leaving-date" type="date" name="leaving-date" id="leaving-date" placeholder="1 апреля 2015" required>
           <label class="form__title form__title--date" for="leaving-date">Дата возвращения</label>
         </div>
       </section>
@@ -94,7 +94,7 @@
           <label class="form__title form__title--companions" for="companions-number">Количество попутчиков &#8432;</label>
           <div class="number-field">
             <a class="number-field__control number-field__control--menus" href="">&ndash;</a>
-            <input class="number-field__input" type="text" name="companions-number" id="companions-number" placeholder ="2 чел" required>
+            <input class="form__input form__input--number" type="number" name="companions-number" id="companions-number" placeholder ="2 чел" required>
             <a class="number-field__control number-field__control--plus" href="">+</a>
           </div>
           <div class="companions">
@@ -104,10 +104,10 @@
                 <div class="item-number__number">1</div>
               </div>
               <div class="companion-info">
-                <label class="form__title" for="companion-name">Имя: &#8432;</label>
-                <input class="companion-info__input" type="text" name="companion-name" id="companion-name" placeholder="Введите ваше имя" required>
-                <label class="form__title" for="companion-nickname">Прозвище: &#8432;</label>
-                <input class="companion-info__input" type="text" name="companion-nickname" id="companion-nickname" placeholder="Ну как же без этого!">
+                <label class="form__title form__title--companion-info" for="companion-name">Имя: &#8432;</label>
+                <input class="form__input form__input--companions" type="text" name="companion-name" id="companion-name" placeholder="Введите имя друга" required>
+                <label class="form__title form__title--companion-info" for="companion-nickname">Прозвище: &#8432;</label>
+                <input class="form__input form__input--companions" type="text" name="companion-nickname" id="companion-nickname" placeholder="Ну как же без этого!">
               </div>
             </div>
             <div class="companion-item">
@@ -116,10 +116,10 @@
                 <div class="item-number__number">2</div>
               </div>
               <div class="companion-info">
-                <label class="form__title" for="companion-name">Имя: &#8432;</label>
-                <input class="companion-info__input" type="text" name="companion-name" id="companion-name" placeholder="Введите ваше имя" required>
-                <label class="form__title" for="companion-nickname">Прозвище: &#8432;</label>
-                <input class="companion-info__input" type="text" name="companion-nickname" id="companion-nickname" placeholder="Ну как же без этого!">
+                <label class="form__title form__title--companion-info" for="companion-name">Имя: &#8432;</label>
+                <input class="form__input form__input--companions" type="text" name="companion-name" id="companion-name" placeholder="Введите имя друга" required>
+                <label class="form__title form__title--companion-info" for="companion-nickname">Прозвище: &#8432;</label>
+                <input class="form__input form__input--companions" type="text" name="companion-nickname" id="companion-nickname" placeholder="Ну как же без этого!">
               </div>
             </div>
           </div>
@@ -131,27 +131,27 @@
           <p class="form__title form__title--general">Ваши безбашенные достижения в&nbsp;путешествии</p>
           <ul class="achievement">
             <li>
-              <input type="checkbox" name="shark" id="shark" checked>
+              <input class="form__input form__input--checkbox" type="checkbox" name="shark" id="shark" checked>
               <label class="achievement__item" for="shark">Сделал селфи с&nbsp;акулой</label>
             </li>
             <li>
-              <input type="checkbox" name="sunburn" id="sunburn" checked>
+              <input class="form__input form__input--checkbox" type="checkbox" name="sunburn" id="sunburn" checked>
               <label class="achievement__item" for="sunburn">Обгорел на&nbsp;пляже</label>
             </li>
             <li>
-              <input type="checkbox" name="chuck" id="chuck">
+              <input class="form__input form__input--checkbox" type="checkbox" name="chuck" id="chuck">
               <label class="achievement__item" for="chuck">Видел Чака Норриса</label>
             </li>
             <li>
-              <input type="checkbox" name="souvenirs" id="souvenirs">
+              <input class="form__input form__input--checkbox" type="checkbox" name="souvenirs" id="souvenirs">
               <label class="achievement__item" for="souvenirs">Накупил сувениров</label>
             </li>
             <li>
-              <input type="checkbox" name="tower" id="tower" checked>
+              <input class="form__input form__input--checkbox" type="checkbox" name="tower" id="tower" checked>
               <label class="achievement__item" for="tower">Удержал башню</label>
             </li>
             <li>
-              <input type="checkbox" name="hotel" id="hotel">
+              <input class="form__input form__input--checkbox" type="checkbox" name="hotel" id="hotel">
               <label class="achievement__item" for="hotel">Разгромил отель</label>
             </li>
           </ul>
@@ -161,7 +161,7 @@
       <section class="form-section form-section--grey form-section--photo">
         <div class="form__container">
           <div class="form__title form__title--photo" for="upload-photo">Ваши фотографии из&nbsp;поездки &#8432;</div>
-          <input type="file" name="upload-photo" id="upload-photo" multiple accept="image/*,image/jpeg">
+          <input class="form__input form__input--file" type="file" name="upload-photo" id="upload-photo" multiple accept="image/*,image/jpeg">
           <label class="btn btn--upload" for="upload-photo">Загрузить фото</label>
           <div class="uploaded-photo">
             <div class="uploaded-photo__preview">
@@ -201,7 +201,7 @@
       </section>
 
       <div class="form__container">
-        <button type="submit" class="btn btn--green">Отправить форму</button>
+        <button class="btn btn--green" type="submit">Отправить форму</button>
         <div class="form-correction"><span class="form-correction__symbol">&#8432;</span> &mdash; обязательные поля</div>
       </div>
     </form>

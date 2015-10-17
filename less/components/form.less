@@ -10,36 +10,94 @@
   &__description {
     margin-top: 45px;
   }
+}
 
-  &__title {
-    display: block;
-    margin-bottom: 12px;
-    line-height: @line-height--h2;
-    text-transform: uppercase;
-    color: @pink;
+.form__input {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  margin-bottom: 23px;
+  padding: 15px 3px 15px 20px;
+  border: 2px solid #e7e7e7;
+  border-radius: 2px;
+  outline: none;
+  font-size: @font-size--big;
+  line-height: @line-height--base;
+
+  &--radio,
+  &--checkbox,
+  &--file {
+    display: none;
   }
 
-  &__title--name {
+  &--radio:checked ~ .user-plarform__item::after {
+    position: absolute;
+    top: 5px;
+    left: 13px;
+    width: 15px;
+    height: 15px;
+    content: "";
+    background: @pink;
+    border-radius: 50%;
+  }
+
+  &--checkbox:checked ~ .achievement__item::after {
+    position: absolute;
+    top: 7px;
+    left: 9px;
+    width: 26px;
+    height: 20px;
+    content: "";
+    background: url("../img/icon_checkbox.png") 0 0 no-repeat;
+  }
+
+  &--number {
+    flex-grow: 1;
+    min-width: 100px;
+    margin-bottom: 0;
+    border-left-style: none;
+    border-right-style: none;
+    text-align: center;
+  }
+
+  &--leaving-date {
+    background: @bg--grey;
+  }
+}
+
+.form__title {
+  display: block;
+  margin-bottom: 12px;
+  line-height: @line-height--h2;
+  text-transform: uppercase;
+  color: @pink;
+
+  &--name {
     margin-left: 23px;
     text-align: left;
   }
 
-  &__title--general {
+  &--general {
     margin-top: 19px;
     margin-bottom: 42px;
   }
 
-  &__title--date {
+  &--date {
     margin-top: 15px;
     margin-bottom: 22px;
   }
 
-  &__title--companions {
+  &--companions {
     margin-top: 8px;
     margin-bottom: 32px;
   }
 
-  &__title--photo {
+  &--companion-info {
+    margin-left: 22px;
+    text-align: left;
+  }
+
+  &--photo {
     margin-top: 7px;
     margin-bottom: 32px;
   }
@@ -60,37 +118,15 @@
   &--photo {
     padding-bottom: 7px;
   }
-}
 
-.form-section--date {
-  padding-bottom: 27px;
-
-  input[type="text"],
-  .number-field {
-    margin-bottom: 0;
+  &--date {
+    padding-bottom: 27px;
   }
-}
-
-input[type="text"] {
-  display: block;
-  box-sizing: border-box;
-  width: 100%;
-  margin-bottom: 23px;
-  padding: 15px 3px 15px 20px;
-  border: 2px solid #e7e7e7;
-  border-radius: 2px;
-  outline: none;
-  font-size: @font-size--big;
-  line-height: @line-height--base;
 }
 
 .user-plarform {
   margin-top: 35px;
   text-align: left;
-
-  & input[type="radio"] {
-    display: none;
-  }
 
   & label {
     cursor: pointer;
@@ -122,51 +158,24 @@ input[type="text"] {
   }
 }
 
-input[type="radio"]:checked ~ .user-plarform__item::after {
-  position: absolute;
-  top: 5px;
-  left: 13px;
-  width: 15px;
-  height: 15px;
-  content: "";
-  background: @pink;
-  border-radius: 50%;
-}
-
 .number-field {
   display: flex;
   justify-content: space-between;
-
-  &__input[type="text"] {
-    flex-grow: 1;
-    min-width: 100px;
-    margin-bottom: 0;
-    border-left-style: none;
-    border-right-style: none;
-    text-align: center;
-  }
 
   &__control {
     padding-left: 20px;
     padding-right: 20px;
     border: 2px solid #e7e7e7;
     font-size: 37px;
-    color: @grey--dark;
     line-height: @line-height--base;
+    color: @grey--dark;
+    background: @bg--white;
   }
-}
-
-input[name="leaving-date"] {
-  background: @bg--grey;
 }
 
 .form-section--grey {
 
-  .number-field__control {
-    background: @bg--white;
-  }
-
-  .number-field__input {
+  & .form__input--number {
     background: @bg--grey;
   }
 }
@@ -189,34 +198,22 @@ input[name="leaving-date"] {
 
 .companion-info {
   flex-grow: 1;
-
-  .form__title {
-    margin-left: 22px;
-    text-align: left;
-  }
 }
 
-.item-number {
-
-  &__number {
-    box-sizing: border-box;
-    margin-bottom: 23px;
-    padding: 15px 25px;
-    border: 2px solid #e7e7e7;
-    border-right: none;
-    border-radius: 2px;
-    font-size: @font-size--big;
-    line-height: @line-height--base;
-    background: @bg--grey;
-  }
+.item-number__number {
+  box-sizing: border-box;
+  margin-bottom: 23px;
+  padding: 15px 25px;
+  border: 2px solid #e7e7e7;
+  border-right: none;
+  border-radius: 2px;
+  font-size: @font-size--big;
+  line-height: @line-height--base;
+  background: @bg--grey;
 }
 
 .achievement {
   text-align: left;
-
-  & input[type="checkbox"] {
-    display: none;
-  }
 
   & label {
     cursor: pointer;
@@ -245,20 +242,6 @@ input[name="leaving-date"] {
     border: 2px solid #e7e7e7;
     background: @bg--white;
   }
-}
-
-input[type="checkbox"]:checked ~ .achievement__item::after {
-  position: absolute;
-  top: 7px;
-  left: 9px;
-  width: 26px;
-  height: 20px;
-  content: "";
-  background: url("../img/icon_checkbox.png") 0 0 no-repeat;
-}
-
-input[type="file"] {
-  display: none;
 }
 
 .form-correction {
