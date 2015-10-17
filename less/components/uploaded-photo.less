@@ -1,0 +1,41 @@
+.uploaded-photo {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  padding-top: 35px;
+  border-top: 2px solid #e7e7e7;
+
+  &__preview {
+    position: relative;
+    margin-right: 7%;
+    margin-bottom: 23px;
+  }
+
+  &__preview::before {
+    content: "";
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    width: 29px;
+    height: 29px;
+    background: @bg--white url("../img/icon_delete.png") 50% 50% no-repeat;
+    border: 2px solid #e5e5e5;
+    border-radius: 50%;
+    z-index: 50;
+    cursor: pointer;
+  }
+
+  &__caption {
+    font-size: @font-size--small;
+    text-transform: uppercase;
+    line-height: 1;
+    text-align: left;
+  }
+
+  &__preview img {
+    width: 68px;
+    height: 68px;
+    overflow: hidden;
+  }
+}
+

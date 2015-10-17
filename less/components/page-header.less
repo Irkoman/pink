@@ -1,4 +1,7 @@
 .page-header {
+
+  .clearfix();
+
   position: absolute;
   top: 0;
   width: 100%;
@@ -9,13 +12,11 @@
   background-color: hsla(213, 26%, 15%, 0.5);
 
   &__container {
-
-    width: @width-container;
-    margin: auto;
+    .container();
   }
 
   &__logo {
-  float: left;
+    float: left;
   }
 }
 

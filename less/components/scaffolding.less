@@ -4,7 +4,7 @@ html {
 
 body {
   position: relative;
-  max-width: 320px;
+  margin: 0;
   text-align: center;
   font-family: @font-family--base;
   font-size: @font-size;
@@ -13,19 +13,31 @@ body {
   color: @grey--dark;
 }
 
-.clearfix::after {
-  content: "";
-  display: block;
-  clear: both;
+img {
+  max-width: 100%;
+}
+
+p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+h1 {
+  margin-top: 20px;
+  padding-bottom: 9px;
+  font-size: @font-size--h1;
+  font-weight: (@font-weight--base - 100);
+  line-height: @line-height--h1;
+}
+
+h2 {
+  font-size: @font-size--h2;
+  color: #000000;
 }
 
 a {
   color: @pink;
   text-decoration: none;
-}
-p {
-  margin-top: 10px;
-  margin-bottom: 10px;
 }
 
 .base-link {
@@ -44,6 +56,7 @@ ul {
   text-align: left;
 
   &__item {
+    margin: 30px 0 25px;
     position: relative;
     padding-left: 21px;
   }
@@ -52,7 +65,7 @@ ul {
     content: "";
     position: absolute;
     top: 10px;
-    left: -14px;
+    left: 0px;
     display: block;
     width: 6px;
     height: 6px;
@@ -62,12 +75,13 @@ ul {
 }
 
 .base-blockquote {
-  padding-left: 20px;
+  margin-bottom: 2px;
+  padding-left: 19px;
   text-align: left;
   border-left: 2px solid @pink;
 
   & blockquote {
-    margin: 0;
+    margin: 32px 0 9px;
   }
 
   & cite {
@@ -76,10 +90,10 @@ ul {
   }
 }
 
-.main-heading {
-  margin-top: 20px;
-  margin-bottom: 31px;
-  font-size: @font-size--h1;
-  font-weight: (@font-weight--base - 100);
-  line-height: @line-height--h1;
+.date {
+  display: block;
+  margin-bottom: 17px;
+  font-size: @font-size--small;
+  text-transform: uppercase;
+  color: @pink;
 }

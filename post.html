@@ -10,7 +10,7 @@
   </head>
   <body>
     <header class="page-header">
-      <div class="page-header__container clearfix">
+      <div class="page-header__container">
         <a class="page-header__logo" href="index.html"><img src="img/logo_small.png" alt="Pink" width="74" height="23"></a>
         <input class="nav-btn" type="checkbox" name="nav-btn" id="nav-btn">
         <label class="toggler" for="nav-btn"><span class="toggler__hamburger"></span></label>
@@ -36,15 +36,17 @@
 
     <div class="page-title">
       <div class="page-title__container">
-        <h1 class="main-heading">Блог путешественников, пользователей Пинк</h1>
+        <h1 class="page-title__heading page-title__heading--blog">Блог путешественников, пользователей Пинк</h1>
       </div>
     </div>
 
 
-    <article class="post">
-      <h1 class="post__title">Антон и&nbsp;Надя в&nbsp;Таиланде</h1>
-      <time class="date">Опубликовано: 6&nbsp;месяцев назад</time>
-      <div class="post__description">Читайте рассказ о&nbsp;том, как семейная пара посещала Тайланд, стараясь максимально избегать избитых туристических мест и&nbsp;районов.</div>
+    <article class="post container">
+      <section class="post-preview post-preview--large">
+        <h1 class="post-preview__title">Антон и&nbsp;Надя в&nbsp;Таиланде</h1>
+        <time class="date">Опубликовано: 6&nbsp;месяцев назад</time>
+        <p class="post-preview__description">Читайте рассказ о&nbsp;том, как семейная пара посещала Тайланд, стараясь максимально избегать избитых туристических мест и&nbsp;районов.</p>
+      </section>
 
       <section class="post-rubric">
         <h2 class="post-rubric__subtitle">Предыстория</h2>
@@ -72,23 +74,23 @@
       </section>
     </article>
 
-    <div class="pagination">
-      <a class="pagination-link pagination-link--prev" href="">Пред.</a>
-      <a class="pagination-link pagination-link--next" href="">След.</a>
-      <a class="pagination-link pagination-link--back" href="">Назад к списку</a>
+    <div class="pagination container">
+      <a class="pagination__link pagination__link--textual" href="">Пред.</a>
+      <a class="pagination__link pagination__link--textual" href="">След.</a>
+      <a class="pagination__link pagination__link--textual pagination__link--large" href="">Назад к списку</a>
     </div>
 
 
     <footer class="page-footer">
       <div class="page-footer__container">
-        <a class="logo logo--form-page" href="index.html"><img src="" alt="Pink"></a>
+        <a class="logo logo--full" href="index.html"><img src="img/logo_full.png" alt="Pink"></a>
         <section class="social-links">
             <a class="social-link social-link--twitter" href="#">Twitter</a>
             <a class="social-link social-link--facebook" href="#">Facebook</a>
             <a class="social-link social-link--youtube" href="#">Youtube</a>
         </section>
         <section class="copyright">
-          <p class="copyright__text">Разработано <a class="copyright__link" href="https://htmlacademy.ru/">HTML Academy</a></p>
+          <p class="copyright__text">Разработано <a class="copyright__link" target="_blank" href="https://htmlacademy.ru/"><img src="img/logo_Academy.png" alt="HTML Academy"></a></p>
         </section>
       </div>
     </footer>

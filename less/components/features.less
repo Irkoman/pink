@@ -1,21 +1,21 @@
 .features {
 
   &__container {
-    width: @width-container;
-    margin: auto;
+    .container();
     padding-top: 22px;
   }
 
-  &-title::after {
+  &__title::after {
     content: "";
     display: block;
     width: 100%;
-    height: 36px;
-    background-image: linear-gradient(to right bottom, @bg--white 50%, @bg--grey 50%);
+    height: 30px;
+    margin-top: 26px;
+    background-image: linear-gradient(to left top, @bg--grey 50%, @bg--white 50%);
   }
 
   &__items {
-    padding-top: 8px;
+    padding-top: 11px;
     background-color: @bg--grey;
   }
 
@@ -32,9 +32,4 @@
 
 .features-item {
   margin-bottom: 30px;
-
-  &__title {
-    font-size: @font-size--h2;
-    color: #000000;
-  }
 }
