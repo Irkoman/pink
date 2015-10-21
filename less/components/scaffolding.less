@@ -4,6 +4,7 @@ html {
 
 body {
   position: relative;
+  width: 100%;
   margin: 0;
   text-align: center;
   font-family: @font-family--base;
@@ -19,6 +20,7 @@ body {
 
 img {
   max-width: 100%;
+  height: auto;
 }
 
 p {
@@ -56,6 +58,15 @@ a {
   font-weight: 400;
   color: @pink;
   text-decoration: underline;
+
+  &:hover {
+    color: @grey--dark;
+    text-decoration: underline;
+  }
+
+  &:active {
+    color: rgba(40, 54, 69, 0.3);
+  }
 }
 
 ul {

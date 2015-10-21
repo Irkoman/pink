@@ -1,9 +1,79 @@
-.logo {
+.page-footer {
 
-  &--full {
+  &--main-page {
+    display: none;
+
+    @media (min-width: @screen_tablet) {
+      display: block;
+    }
+  }
+
+  &__container {
+    .container();
+
+    @media (min-width: @screen_tablet) {
+      width: @width-container--tablet;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 65px;
+      padding-bottom: 65px;
+    }
+
+    @media (min-width: @screen_desktop) {
+      width: @width-container--desktop;
+    }
+  }
+
+  &__logo {
     display: block;
     margin: 40px auto 34px;
+
+    @media (min-width: @screen_tablet) {
+      width: 33%;
+      margin: auto 0;
+    }
   }
+}
+
+.logo-blue {
+
+  &--tablet {
+    display: none;
+    width: 146.3px;
+    height: 40.375px;
+
+    @media all and (min-width: @screen_tablet) {
+      display: block;
+    }
+
+    @media all and (min-width: @screen_desktop) {
+      display: none;
+    }
+  }
+
+  &--desktop {
+    display: none;
+    width: 146.3px;
+    height: 40.375px;
+
+    @media all and (min-width: @screen_desktop) {
+      display: inline;
+    }
+  }
+}
+
+.page-footer__logo:hover .logo-blue__text {
+  fill: @pink;
+}
+
+.page-footer__logo:active .logo-blue__text {
+  fill: @grey--dark;
+}
+
+.page-footer__logo:active .logo-blue {
+  opacity: 0.3;
 }
 
 .social-links {
@@ -11,6 +81,11 @@
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 27px;
+
+  @media (min-width: @screen_tablet) {
+    width: 33%;
+    margin: auto;
+  }
 }
 
 .social-link {
@@ -23,23 +98,38 @@
   font-size: 0;
   border: 3px solid #e9ebec;
   border-radius: 50%;
-  background: @bg--white url("../img/sprite.png") no-repeat;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &:hover {
+    border-color: @grey--dark;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   &--twitter {
-    background-position: -57px 5px;
+    background-image: url("../img/twitter.svg");
   }
 
   &--facebook {
-    background-position: 7px 5px;
+    background-image: url("../img/facebook.svg");
   }
 
   &--youtube {
-    background-position: -124px 5px;
+    background-image: url("../img/youtube.svg");
   }
 }
 
 .copyright {
   margin-bottom: 40px;
+
+  @media (min-width: @screen_tablet) {
+    width: 33%;
+    margin: auto;
+    margin-right: 0;
+  }
 
   &__text {
     display: inline-block;
@@ -50,5 +140,17 @@
     display: inline-block;
     vertical-align: middle;
     margin-left: 15px;
+  }
+
+  &__logo {
+    fill: @pink;
+  }
+
+  &__link:hover &__logo {
+    fill: @grey--dark;
+  }
+
+  &__link:active &__logo {
+    opacity: 0.3;
   }
 }

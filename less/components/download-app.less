@@ -15,9 +15,13 @@
 
   &__platforms {
     width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 24px;
+    height: 56.753px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 24px;
+    padding: auto;
 
     @media (min-width: @screen_tablet) {
       margin-top: 43px;
@@ -26,35 +30,30 @@
   }
 
   @media (min-width: @screen_tablet) {
-    padding-top: 4px;
     font-size: @font-size--big;
     background: none;
   }
 }
 
 .platform {
-  display: inline-block;
-  vertical-align: middle;
-  text-align: left;
-  width: 47px;
-  height: 60px;
-  margin-left: 4%;
-  margin-right: 4%;
-  background-image: url("../img/sprite.png");
 
-  &:last-child {
-    margin-right: 0;
-  }
+  width: 46.21px;
+  height: 56.753px;
+  margin-left: 9px;
+  margin-right: 9px;
+
+  background-position: center;
+  background-repeat: no-repeat;
 
   &--Apple {
-    background-position: 106px -4px;
+    background-image: url("../img/apple-logo.svg");
   }
 
   &--Android {
-    background-position: 159px 6px;
+    background-image: url("../img/android-logo.svg");
   }
 
   &--Windows {
-    background-position: 50px 9px;
+    background-image: url("../img/microsoft-logo.svg");
   }
 }

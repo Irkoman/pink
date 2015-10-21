@@ -9,6 +9,15 @@
 
 .container {
   width: @width-container;
+  max-width: 960px;
   margin-right: auto;
   margin-left: auto;
+
+  @media (min-width: @screen_tablet) {
+    width: @width-container--tablet;
+  }
+
+  @media (min-width: @screen_desktop) {
+    width: @width-container--desktop;
+  }
 }

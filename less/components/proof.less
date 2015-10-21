@@ -15,9 +15,10 @@
   }
 
   &__container {
+    position: relative;
 
     @media (min-width: @screen_tablet) {
-      max-width: 320px;
+      width: 50%;
       margin-right: 3%;
       margin-left: auto;
       padding: 100px 0;
@@ -37,6 +38,51 @@
 
     @media (min-width: @screen_desktop) {
       font-size: @font-size--h2;
+    }
+  }
+}
+
+.timer {
+  position: absolute;
+  top: 30px;
+  left: -300px;
+  width: 298.001px;
+  height: 345.097px;
+  z-index: 100;
+
+  @media (min-width: @screen_desktop) {
+    left: -400px;
+  }
+
+  &__color {
+
+    @media (min-width: @screen_tablet) {
+      fill: #eeeeee;
+    }
+
+    @media (min-width: @screen_desktop) {
+      fill: #dedede;
+    }
+  }
+
+  &__time {
+    position: absolute;
+    top: 86px;
+    left: 38px;
+    width: 197px;
+    height: 197px;
+    font-size: 104.6px;
+    font-weight: 700;
+    line-height: 197px;
+    text-align: center;
+    vertical-align: middle;
+    color: @pink;
+    border: 12px solid @pink;
+    border-radius: 50%;
+    background-color: @bg--white;
+
+    @media (min-width: @screen_desktop) {
+      background-color: @bg--grey;
     }
   }
 }

@@ -18,6 +18,14 @@
     background: @bg--white;
   }
 
+  &__link:hover {
+    border-color: @grey--dark;
+  }
+
+  &__link:active {
+    opacity: 0.3;
+  }
+
   &__link:last-child {
     margin-right: 0;
   }
@@ -34,5 +42,9 @@
     width: 100%;
     margin-bottom: 11px;
   }
-}
 
+  &__link--textual:hover,
+  &__link--large:hover {
+    border-color: @grey--dark;
+  }
+}

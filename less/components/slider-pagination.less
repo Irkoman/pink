@@ -2,6 +2,18 @@
   margin-left: auto;
   margin-right: auto;
 
+  &--price {
+    @media (min-width: @screen_tablet) {
+      display: none;
+    }
+  }
+
+  &--reviews {
+    @media (min-width: @screen_desktop) {
+      display: none;
+    }
+  }
+
   &__control {
     display: inline-block;
     vertical-align: middle;
@@ -19,5 +31,21 @@
   &__control--active {
     border: 3px solid @grey--dark;
     background-color: @bg--white;
+  }
+}
+
+.slider-pagination__control {
+
+  &:hover {
+    background-color: #7e868f;
+  }
+
+  &:active {
+    background-color: #e9ebec;
+  }
+
+  &--active:hover,
+  &--active:active {
+    background: @bg--white;
   }
 }
