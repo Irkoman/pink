@@ -2,20 +2,20 @@
   position: absolute;
   top: 0;
   width: 100%;
-  padding-top: 22px;
-  padding-bottom: 15px;
   color: @text--white;
   background-color: rgba(0, 0, 0, 0.3);
   z-index: 1000;
 
-  @media (min-width: @screen_tablet) {
-    padding-top: 40px;
-    padding-bottom: 37px;
-  }
-
   &__container {
     .container();
     .clearfix();
+    padding-top: 22px;
+    padding-bottom: 15px;
+
+    @media (min-width: @screen_tablet) {
+      padding-top: 35px;
+      padding-bottom: 35px;
+    }
   }
 
   &__logo {
