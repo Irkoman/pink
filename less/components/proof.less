@@ -15,20 +15,23 @@
   }
 
   &__container {
-    position: relative;
+    .container();
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 0;
+  }
+
+  &__content {
 
     @media (min-width: @screen_tablet) {
-      width: 50%;
-      margin-right: 3%;
-      margin-left: auto;
-      padding: 100px 0;
+      width: auto;
     }
 
     @media (min-width: @screen_desktop) {
-      max-width: 570px;
-      margin-right: 10%;
-      margin-left: auto;
-      padding: 120px 0;
+      max-width: 620px;
     }
   }
 
@@ -42,44 +45,48 @@
   }
 }
 
-.timer {
-  position: absolute;
-  top: 30px;
-  left: -300px;
-  width: 298.001px;
-  height: 345.097px;
-  z-index: 100;
+.timer__color {
+
+  @media (min-width: @screen_tablet) {
+    fill: #eeeeee;
+  }
 
   @media (min-width: @screen_desktop) {
-    left: -400px;
+    fill: #dedede;
+  }
+}
+
+.timer__image {
+  position: relative;
+  width: 298.001px;
+  height: 345.097px;
+  z-index: 20;
+
+  @media (min-width: @screen_tablet) {
+    margin-right: 50px;
   }
 
-  &__color {
-
-    @media (min-width: @screen_tablet) {
-      fill: #eeeeee;
-    }
-
-    @media (min-width: @screen_desktop) {
-      fill: #dedede;
-    }
+  @media (min-width: @screen_desktop) {
+    margin-right: 65px;
   }
 
-  &__time {
+  &::before {
+    content: "24";
     position: absolute;
-    top: 86px;
+    top: 85px;
     left: 38px;
     width: 197px;
     height: 197px;
+    font-family: @font-family--base;
     font-size: 104.6px;
     font-weight: 700;
     line-height: 197px;
     text-align: center;
-    vertical-align: middle;
     color: @pink;
     border: 12px solid @pink;
     border-radius: 50%;
     background-color: @bg--white;
+    z-index: 100;
 
     @media (min-width: @screen_desktop) {
       background-color: @bg--grey;
