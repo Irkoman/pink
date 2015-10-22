@@ -3,8 +3,8 @@
   top: 0;
   width: 100%;
   color: @text--white;
-  background-color: rgba(0, 0, 0, 0.3);
   z-index: 1000;
+  user-select: none;
 
   &__container {
     .container();
@@ -20,6 +20,24 @@
 
   &__logo {
     float: left;
+  }
+
+  &--mini {
+    background-color: rgba(0, 0, 0, 0.3);
+
+    @media (min-width: @screen_desktop) {
+      display: none;
+    }
+  }
+
+  &--full {
+    display: none;
+    background-color: @grey--dark;
+
+    @media (min-width: @screen_desktop) {
+      display: block;
+      background-color: rgba(0, 0, 0, 0.3);
+    }
   }
 }
 
@@ -74,12 +92,11 @@
 }
 
 .toggler {
+  position: relative;
   float: right;
-  display: flex;
-  align-items: center;
+  display: block;
   width: 50px;
-  height: 24px;
-  user-select: none;
+  height: 25px;
   cursor: pointer;
 
   @media (min-width: @screen_desktop) {
@@ -87,35 +104,54 @@
   }
 }
 
-.toggler__hamburger {
-  position: relative;
-  width: 100%;
-  height: 4px;
-  background: @bg--white;
+.toggler--open {
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 1) 20%,
+    rgba(255, 255, 255, 0) 20%,
+    rgba(255, 255, 255, 0) 40%,
+    rgba(255, 255, 255, 1) 40%,
+    rgba(255, 255, 255, 1) 60%,
+    rgba(255, 255, 255, 0) 60%,
+    rgba(255, 255, 255, 0) 80%,
+    rgba(255, 255, 255, 1) 80%,
+    rgba(255, 255, 255, 1) 100%
+  );
+}
 
-  &::before,
-  &::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background: @bg--white;
-  }
+.toggler--open:hover {
+  background-image: linear-gradient(
+    rgba(210, 40, 86, 1) 20%,
+    rgba(255, 255, 255, 0) 20%,
+    rgba(255, 255, 255, 0) 40%,
+    rgba(210, 40, 86, 1) 40%,
+    rgba(210, 40, 86, 1) 60%,
+    rgba(255, 255, 255, 0) 60%,
+    rgba(255, 255, 255, 0) 80%,
+    rgba(210, 40, 86, 1) 80%,
+    rgba(210, 40, 86, 1) 100%
+  );
+}
 
-  &::before {
-    top: 10px;
-  }
+.toggler--close::before {
+  content: "+";
+  position: absolute;
+  top: -45px;
+  right: -10px;
+  font-size: 70px;
+  font-family: @font-family--base;
+  font-weight: 300;
+  color: @text--white;
+  z-index: 70;
+  transform: rotate(45deg);
 
-  &::after {
-    top: -10px;
+  @media (min-width: @screen_tablet) {
+    top: -30px;
+    right: 0;
   }
 }
 
-.toggler:hover .toggler__hamburger,
-.toggler:hover .toggler__hamburger::before,
-.toggler:hover .toggler__hamburger::after {
-  background: @pink;
+.toggler--close:hover::before {
+  color: @pink;
 }
 
 .toggler:active {
@@ -126,12 +162,11 @@
   display: none;
 }
 
-.nav-btn:checked ~ .navigation {
+.nav-btn:checked ~ .page-header--full {
   display: block;
 }
 
 .navigation {
-  display: none;
   position: absolute;
   top: 100%;
   left: 0;
