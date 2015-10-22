@@ -1,4 +1,5 @@
 .post-preview {
+  position: relative;
   padding: 20px 0;
   text-align: left;
   line-height: 1.928;
@@ -8,6 +9,10 @@
     border: none;
   }
 
+  @media all and (min-width: @screen_tablet) {
+    border-bottom: 1px dotted #e5e5e5;
+  }
+
   &__link {
     display: block;
     margin-bottom: 3px;
@@ -15,29 +20,77 @@
     font-weight: (@font-weight--base + 300);
     line-height: @line-height--base;
     color: @grey--dark;
+
+    @media all and (min-width: @screen_tablet) {
+      font-size: 1.6875rem;
+      line-height: (@line-height--h2 - 0.2);
+    }
   }
 
   &__description {
     font-size: @font-size;
     color: @grey--dark;
+
+    @media all and (min-width: @screen_tablet) {
+      font-size: @font-size--big;
+      line-height: @line-height--base;
+    }
   }
-}
 
-.post-preview--large {
-  padding: 0 0 12px;
-  text-align: center;
-  line-height: @line-height--base;
-
-  .post-preview__title {
+  &__title {
     margin-top: 34px;
     margin-bottom: 11px;
     font-size: (@font-size--h1 + 0.375rem);
     font-weight: (@font-weight--base + 300);
     line-height: @line-height--h1;
     color: @grey--dark;
-  }
 
-  .post-preview__description {
-    font-size: @font-size--big;
+    @media all and (min-width: @screen_tablet) {
+      font-size: 3.125rem;
+    }
+  }
+}
+
+.post-preview--small::before {
+  display: none;
+  content: "";
+  position: absolute;
+  top: 21px;
+  left: -60px;
+  width: 28px;
+  height: 26px;
+  background: url("../img/blog-post-icon.svg") center no-repeat;
+
+  @media all and (min-width: @screen_tablet) {
+    display: block;
+  }
+}
+
+.post-preview--large {
+  position: relative;
+  padding: 0 0 12px;
+  text-align: center;
+  line-height: @line-height--base;
+
+  @media all and (min-width: @screen_tablet) {
+    border-bottom: none;
+  }
+}
+
+.post-preview--large::after {
+  content: "";
+  display: block;
+  position: relative;
+  top: -10px;
+  border-bottom: 1px dotted #e5e5e5;
+  z-index: -5;
+}
+
+.post-preview__description--large {
+  font-size: @font-size--big;
+
+  @media all and (min-width: @screen_tablet) {
+    font-size: 1.5rem;
+    line-height: @line-height--base;
   }
 }

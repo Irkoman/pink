@@ -1,4 +1,10 @@
 .post {
+  .container();
+
+  @media (min-width: @screen_desktop) {
+    max-width: 820px;
+  }
+
   margin-bottom: 43px;
 
   &__title {
@@ -17,11 +23,19 @@
   font-size: @font-size;
   line-height: (@line-height--base + 0.3);
 
+  @media (min-width: @screen_tablet) {
+    font-size: @font-size--big;
+  }
+
   &__subtitle {
     margin-bottom: 20px;
     font-size: @font-size--big;
     font-weight: (@font-weight--base + 300);
+    color: @grey--dark;
     text-transform: uppercase;
+
+    @media (min-width: @screen_tablet) {
+      font-size: 1.5rem;
+    }
   }
 }
-

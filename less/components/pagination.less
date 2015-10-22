@@ -1,9 +1,31 @@
 .pagination {
+  .container();
+
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
   margin-top: 26px;
   margin-bottom: 49px;
+  margin-left: 0;
+
+  &--numeral::before {
+    display: none;
+    content: "Стр.";
+    position: absolute;
+    top: 17px;
+    left: -60px;
+    width: 45px;
+    height: 25px;
+    font-size: @font-size--big;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: @grey--dark;
+
+    @media all and (min-width: @screen_tablet) {
+      display: block;
+    }
+  }
 
   &__link {
     margin-right: 8px;
@@ -18,11 +40,11 @@
     background: @bg--white;
   }
 
-  &__link:hover {
+  &__link:not(&__link--active):hover {
     border-color: @grey--dark;
   }
 
-  &__link:active {
+  &__link:not(&__link--active):active {
     opacity: 0.3;
   }
 

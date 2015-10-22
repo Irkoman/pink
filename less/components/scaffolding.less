@@ -94,6 +94,10 @@ ul {
     height: 6px;
     background-color: @pink;
     border-radius: 100%;
+
+    @media all and (min-width: @screen_tablet) {
+      top: 15px;
+    }
   }
 }
 
@@ -119,4 +123,23 @@ ul {
   font-size: @font-size--small;
   text-transform: uppercase;
   color: @pink;
+
+  @media all and (min-width: @screen_tablet) {
+    display: none;
+  }
+
+  &--lower {
+    display: none;
+    position: relative;
+    width: 300px;
+    margin: auto;
+    text-align: center;
+    font-size: @font-size;
+    background: @bg--white;
+    z-index: 15;
+
+    @media all and (min-width: @screen_tablet) {
+      display: block;
+    }
+  }
 }

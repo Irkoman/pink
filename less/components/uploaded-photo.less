@@ -7,23 +7,48 @@
   border-top: 2px solid #e7e7e7;
 
   &__preview {
-    position: relative;
     margin-right: 7%;
     margin-bottom: 23px;
   }
 
-  &__preview::before {
-    content: "";
-    position: absolute;
-    top: -15px;
-    right: -15px;
+  &__delete {
+    position: relative;
+    display: block;
+    top: -87%;
+    left: 75%;
     width: 29px;
     height: 29px;
-    background: @bg--white url("../img/icon_delete.png") 50% 50% no-repeat;
     border: 2px solid #e5e5e5;
     border-radius: 50%;
+    background: @bg--white;
     z-index: 50;
     cursor: pointer;
+
+    @media (min-width: @screen_tablet) {
+      width: 52px;
+      height: 52px;
+      top: -87%;
+      left: 74%;
+    }
+  }
+
+  &__delete::before {
+    content: "+";
+    position: absolute;
+    top: -61%;
+    right: 17%;
+    font-size: 30px;
+    font-family: @font-family--base;
+    font-weight: 300;
+    color: #c1c1c1;
+    z-index: 70;
+    transform: rotate(45deg);
+
+    @media (min-width: @screen_tablet) {
+      top: -73%;
+      right: 10%;
+      font-size: 60px;
+    }
   }
 
   &__caption {
@@ -31,11 +56,37 @@
     text-transform: uppercase;
     line-height: 1;
     text-align: left;
+
+    @media (min-width: @screen_tablet) {
+      font-size: @font-size;
+    }
   }
 
   &__preview img {
     width: 68px;
     height: 68px;
     overflow: hidden;
+
+    @media (min-width: @screen_tablet) {
+      width: 120px;
+      height: 120px;
+    }
   }
+}
+
+.uploaded-photo__delete:hover {
+  border-color: @grey--dark;
+}
+
+.uploaded-photo__delete:hover::before {
+  color: #333333;
+}
+
+.uploaded-photo__delete:active {
+  border-color: @grey--dark;
+  background: @grey--dark;
+}
+
+.uploaded-photo__delete:active::before {
+  color: @text--white;
 }

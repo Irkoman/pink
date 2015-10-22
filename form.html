@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Pink: конкурс</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,400italic,600&amp;subset=latin,cyrillic">
-    <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
@@ -108,14 +107,14 @@
           <fieldset class="form__fieldset">
             <legend class="form__title form__title--legend">С&nbsp;каким приложением путешествовали? &#8432;</legend>
             <ul class="user-platform">
-              <li>
-                <input class="form__input form__input--radio" type="radio" name="platform" value="Pink для iOS" id="iOS" checked><label class="user-platform__item" for="iOS">Pink для iOS</label>
+              <li class="user-platform__item">
+                <input class="form__input form__input--radio" type="radio" name="platform" value="Pink для iOS" id="iOS" checked><label class="user-platform__title" for="iOS">Pink для iOS</label>
               </li>
-              <li>
-                <input class="form__input form__input--radio" type="radio" name="platform" value="Pink на Android" id="Android"><label class="user-platform__item" for="Android">Pink на&nbsp;Android</label>
+              <li class="user-platform__item">
+                <input class="form__input form__input--radio" type="radio" name="platform" value="Pink на Android" id="Android"><label class="user-platform__title" for="Android">Pink на&nbsp;Android</label>
               </li>
-              <li>
-                <input class="form__input form__input--radio" type="radio" name="platform" value="Windows Phone" id="Windows"><label class="user-platform__item" for="Windows">Windows Phone</label>
+              <li class="user-platform__item">
+                <input class="form__input form__input--radio" type="radio" name="platform" value="Windows Phone" id="Windows"><label class="user-platform__title" for="Windows">Windows Phone</label>
               </li>
             </ul>
           </fieldset>
@@ -203,30 +202,36 @@
           <fieldset class="form__fieldset form__fieldset--date">
             <legend class="form__title form__title--general form__title--legend">Ваши безбашенные достижения в&nbsp;путешествии</legend>
             <ul class="achievement">
-              <li>
-                <input class="form__input form__input--checkbox" type="checkbox" name="shark" id="shark" checked>
-                <label class="achievement__item" for="shark">Сделал селфи с&nbsp;акулой</label>
-              </li>
-              <li>
-                <input class="form__input form__input--checkbox" type="checkbox" name="sunburn" id="sunburn" checked>
-                <label class="achievement__item" for="sunburn">Обгорел на&nbsp;пляже</label>
-              </li>
-              <li>
-                <input class="form__input form__input--checkbox" type="checkbox" name="chuck" id="chuck">
-                <label class="achievement__item" for="chuck">Видел Чака Норриса</label>
-              </li>
-              <li>
-                <input class="form__input form__input--checkbox" type="checkbox" name="souvenirs" id="souvenirs">
-                <label class="achievement__item" for="souvenirs">Накупил сувениров</label>
-              </li>
-              <li>
-                <input class="form__input form__input--checkbox" type="checkbox" name="tower" id="tower" checked>
-                <label class="achievement__item" for="tower">Удержал башню</label>
-              </li>
-              <li>
-                <input class="form__input form__input--checkbox" type="checkbox" name="hotel" id="hotel">
-                <label class="achievement__item" for="hotel">Разгромил отель</label>
-              </li>
+              <div class="form__group form__group--achievement">
+                <li>
+                  <input class="form__input form__input--checkbox" type="checkbox" name="shark" id="shark" checked>
+                  <label class="achievement__item" for="shark">Сделал селфи с&nbsp;акулой</label>
+                </li>
+                <li>
+                  <input class="form__input form__input--checkbox" type="checkbox" name="sunburn" id="sunburn" checked>
+                  <label class="achievement__item" for="sunburn">Обгорел на&nbsp;пляже</label>
+                </li>
+              </div>
+              <div class="form__group form__group--achievement">
+                <li>
+                  <input class="form__input form__input--checkbox" type="checkbox" name="chuck" id="chuck">
+                  <label class="achievement__item" for="chuck">Видел Чака Норриса</label>
+                </li>
+                <li>
+                  <input class="form__input form__input--checkbox" type="checkbox" name="souvenirs" id="souvenirs">
+                  <label class="achievement__item" for="souvenirs">Накупил сувениров</label>
+                </li>
+              </div>
+              <div class="form__group form__group--achievement">
+                <li>
+                  <input class="form__input form__input--checkbox" type="checkbox" name="tower" id="tower" checked>
+                  <label class="achievement__item" for="tower">Удержал башню</label>
+                </li>
+                <li>
+                  <input class="form__input form__input--checkbox" type="checkbox" name="hotel" id="hotel">
+                  <label class="achievement__item" for="hotel">Разгромил отель</label>
+                </li>
+              </div>
             </ul>
            </fieldset>
         </div>
@@ -242,34 +247,42 @@
               <div class="uploaded-photo__preview">
                 <img src="pictures/uploaded-photo1.jpg">
                 <div class="uploaded-photo__caption">img-1.jpg</div>
+                <a class="uploaded-photo__delete" href=""></a>
               </div>
               <div class="uploaded-photo__preview">
                 <img src="pictures/uploaded-photo2.jpg">
                 <div class="uploaded-photo__caption">img-2.jpg</div>
+                <a class="uploaded-photo__delete" href=""></a>
               </div>
               <div class="uploaded-photo__preview">
                 <img src="pictures/uploaded-photo3.jpg">
                 <div class="uploaded-photo__caption">img-3.jpg</div>
+                <a class="uploaded-photo__delete" href=""></a>
               </div>
               <div class="uploaded-photo__preview">
                 <img src="pictures/uploaded-photo4.jpg">
                 <div class="uploaded-photo__caption">img-4.jpg</div>
+                <a class="uploaded-photo__delete" href=""></a>
               </div>
               <div class="uploaded-photo__preview">
                 <img src="pictures/uploaded-photo5.jpg">
                 <div class="uploaded-photo__caption">img-5.jpg</div>
+                <a class="uploaded-photo__delete" href=""></a>
               </div>
               <div class="uploaded-photo__preview">
                 <img src="pictures/uploaded-photo6.jpg">
                 <div class="uploaded-photo__caption">img-6.jpg</div>
+                <a class="uploaded-photo__delete" href=""></a>
               </div>
               <div class="uploaded-photo__preview">
                 <img src="pictures/uploaded-photo7.jpg">
                 <div class="uploaded-photo__caption">img-7.jpg</div>
+                <a class="uploaded-photo__delete" href=""></a>
               </div>
               <div class="uploaded-photo__preview">
                 <img src="pictures/uploaded-photo8.jpg">
                 <div class="uploaded-photo__caption">img-8.jpg</div>
+                <a class="uploaded-photo__delete" href=""></a>
               </div>
             </div>
           </fieldset>
