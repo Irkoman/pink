@@ -1,6 +1,6 @@
 .post-preview {
   position: relative;
-  padding: 20px 0;
+  padding: 20px 0 15px;
   text-align: left;
   line-height: 1.928;
   border-bottom: 1px solid #e5e5e5;
@@ -68,7 +68,7 @@
 
 .post-preview--large {
   position: relative;
-  padding: 0 0 12px;
+  padding: 0 0 14px;
   text-align: center;
   line-height: @line-height--base;
 
@@ -78,16 +78,20 @@
 }
 
 .post-preview--large::after {
-  content: "";
-  display: block;
-  position: relative;
-  top: -10px;
-  border-bottom: 1px dotted #e5e5e5;
-  z-index: -5;
+
+  @media all and (min-width: @screen_tablet) {
+    content: "";
+    display: block;
+    position: relative;
+    top: -10px;
+    border-bottom: 1px dotted #e5e5e5;
+    z-index: -5;
+  }
 }
 
 .post-preview__description--large {
-  font-size: @font-size--big;
+  font-size: @html-size--base;
+  line-height: (@line-height--base + 0.1);
 
   @media all and (min-width: @screen_tablet) {
     font-size: 1.5rem;

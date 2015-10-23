@@ -1,10 +1,10 @@
 .contacts {
   position: relative;
-  padding-top: 25px;
-  padding-bottom: 8px;
 
   &__container {
     .container();
+    padding-top: 22px;
+    padding-bottom: 15px;
 
     @media (min-width: @screen_tablet) {
       width: @width-container--tablet;
@@ -17,7 +17,7 @@
 
   &__heading {
 
-    margin-bottom: 27px;
+    margin-bottom: 24px;
 
     @media (min-width: @screen_tablet) {
       width: 500px;
@@ -42,8 +42,7 @@
 }
 
 .contacts-item {
-
-  margin-bottom: 20px;
+  margin-bottom: 18px;
   line-height: 1.4;
 
   @media (min-width: @screen_tablet) {
@@ -52,6 +51,7 @@
   }
 
   &__title {
+    margin-top: 0;
     margin-bottom: 0;
     font-size: @font-size--h2;
     font-weight: (@font-weight--base + 300);

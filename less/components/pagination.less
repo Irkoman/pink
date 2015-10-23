@@ -2,6 +2,7 @@
   .container();
 
   position: relative;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -27,10 +28,18 @@
     }
   }
 
+  &--textual {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 38px;
+  }
+
   &__link {
-    margin-right: 8px;
+    margin-right: 10px;
     margin-bottom: 10px;
-    padding: 15px 23px;
+    padding: 15px 22px;
     font-size: @font-size--big;
     font-weight: (@font-weight--base + 300);
     text-transform: uppercase;
@@ -57,6 +66,8 @@
   }
 
   &__link--textual {
+    margin-right: 0;
+    margin-bottom: 19px;
     padding: 15px 13%;
   }
 

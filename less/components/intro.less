@@ -8,16 +8,19 @@
     background-size: 700px auto, 1200px auto;
   }
 
-  @media (min-width: @screen_tablet) and (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  @media (min-width: @screen_tablet) and (min-resolution: 144dpi), (min-width: @screen_tablet) and (min-resolution: 1.5dppx) {
     background-image: url("../img/iphone-hand-tablet@2x.png"), url("../img/background-tablet@2x.jpg");
   }
 
   @media (min-width: @screen_desktop) {
+    background-color: @bg--dark;
+    background-position: center bottom, center top;
+    background-repeat: no-repeat, no-repeat;
     background-image: url("../img/iphone-hand-desktop@1x.png"), url("../img/background-fullsize.jpg");
     background-size: 1050px auto, cover;
   }
 
-  @media (min-width: @screen_desktop) and (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  @media (min-width: @screen_desktop) and (min-resolution: 144dpi), (min-width: @screen_desktop) and (min-resolution: 1.5dppx) {
     background-image: url("../img/iphone-hand-desktop@2x.png"), url("../img/background-fullsize.jpg");
   }
 
