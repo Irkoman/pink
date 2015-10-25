@@ -4,6 +4,7 @@
   line-height: @line-height--h1;
   font-size: @font-size--big;
   font-weight: 700;
+  text-align: center;
 
   &--download {
     padding-top: 14px;
@@ -11,13 +12,28 @@
     font-size: @font-size--big;
     font-weight: 700;
     color: @text--white;
-    background: @bg--dark;
     border: 3px solid @text--white;
     border-radius: 27px;
     text-decoration: none;
+
+    @media (min-width: @screen_tablet) {
+      width: 276px;
+      margin-left: 0;
+    }
+  }
+
+  &--download:hover {
+    color: @pink;
+    background: @bg--white;
+  }
+
+  &--download:active {
+    color: rgba(210, 40, 86, 0.3);
   }
 
   &--upload {
+    width: 100%;
+    box-sizing: border-box;
     margin-bottom: 33px;
     padding: 19px;
     text-transform: uppercase;
@@ -26,6 +42,25 @@
     border: 2px solid #e7e7e7;
     border-radius: 2px;
     cursor: pointer;
+
+    @media (min-width: @screen_tablet) {
+      margin-bottom: 40px;
+    }
+
+    @media (min-width: @screen_desktop) {
+      color: @text--white;
+      background: @pink;
+    }
+  }
+
+  &--upload:hover {
+    border-color: @grey--dark;
+  }
+
+  &--upload:active {
+    color: @text--white;
+    border-color: @grey--dark;
+    background: @grey--dark;
   }
 
   &--green {
@@ -41,5 +76,23 @@
     border-radius: 2px;
     outline: none;
     cursor: pointer;
+
+    @media (min-width: @screen_tablet) {
+      max-width: 300px;
+      float: left;
+      margin-top: 0;
+    }
+  }
+
+  &--green:hover {
+    background: darken(@green, 10%)
+  }
+
+  &--green:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  &--green:disabled {
+    background: #e5e5e5;
   }
 }

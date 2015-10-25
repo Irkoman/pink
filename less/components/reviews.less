@@ -1,24 +1,110 @@
 .reviews {
-  padding-top: 28px;
+  position: relative;
+  overflow: hidden;
 
   &__container {
     .container();
+    padding-top: 28px;
+
+    @media (min-width: @screen_tablet) {
+      padding-top: 50px;
+    }
+  }
+
+  @media (min-width: @screen_desktop) {
+    padding-top: 130px;
+    background: @bg--white url("../img/quotes.svg") 50% 65px no-repeat;
   }
 }
 
 .reviews-item {
   margin-bottom: 27px;
 
-  &__text {
-    line-height: 2.2;
-  }
-
   &--2,
   &--3 {
     display: none;
   }
+
+  &__text {
+    line-height: 2.1;
+
+    @media (min-width: @screen_tablet) {
+      line-height: @line-height--base;
+    }
+  }
+
+  &__info {
+    display: none;
+    font-size: @font-size;
+
+    @media (min-width: @screen_tablet) {
+      display: block;
+      margin-top: 5px;
+    }
+
+    @media (min-width: @screen_desktop) {
+      font-size: (@font-size--big);
+    }
+  }
 }
 
-.slider-reviews {
-  padding-bottom: 40px;
+.reviews-item__title {
+  font-size: @font-size--h2;
+  font-weight: (@font-weight--base + 300);
+
+  @media (min-width: @screen_tablet) {
+    font-size: (@font-size--h2 + 0.125);
+  }
+
+  @media (min-width: @screen_desktop) {
+    font-size: (@font-size--h2 + 0.375);
+  }
+
+  &--upper {
+
+    @media (min-width: @screen_tablet) {
+      display: none;
+    }
+  }
+
+  &--lower {
+    display: none;
+
+    @media (min-width: @screen_tablet) {
+      display: block;
+      margin-top: 32px;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.reviews-slider {
+  position: relative;
+  display: none;
+
+  @media (min-width: @screen_desktop) {
+    display: block;
+  }
+
+  &__control {
+    position: absolute;
+  }
+
+  &__control--left {
+    top: -180px;
+    left: 40px;
+  }
+
+  &__control--right {
+    top: -180px;
+    right: 40px;
+  }
+}
+
+.reviews-slider__control:hover .control-color {
+  fill: #7e868f;
+}
+
+.reviews-slider__control:active .control-color {
+  opacity: 0.3;
 }

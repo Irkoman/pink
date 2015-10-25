@@ -1,45 +1,68 @@
 .download-app {
+  position: relative;
+  z-index: 100;
+  font-weight: (@font-weight--base - 100);
   color: @text--white;
   background-color: @bg--dark;
 
+  @media (min-width: @screen_tablet) {
+    font-size: @font-size--big;
+    background: none;
+  }
+
   &__container {
     .container();
-
     padding-top: 28px;
     padding-bottom: 21px;
+
+    @media (min-width: @screen_tablet) {
+      width: 300px;
+      padding: 5px 0;
+    }
+  }
+
+  &__description {
+
+    @media (min-width: @screen_tablet) {
+      width: 300px;
+      line-height: (@line-height--base - 0.2);
+    }
   }
 
   &__platforms {
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 24px;
+    height: 56.753px;
+    margin: 31px auto 24px;
+    padding: auto;
+
+    @media (min-width: @screen_tablet) {
+      margin-top: 45px;
+      margin-bottom: 34px;
+    }
   }
 }
 
 .platform {
-    display: inline-block;
-    vertical-align: middle;
-    text-align: left;
-    width: 47px;
-    height: 60px;
-    margin-left: 4%;
-    margin-right: 4%;
-    background-image: url("../img/sprite.png");
+  display: inline-block;
+  vertical-align: bottom;
+  width: 46.21px;
+  height: 56.753px;
+  margin-right: 30px;
+  background-position: center bottom;
+  background-repeat: no-repeat;
 
   &:last-child {
     margin-right: 0;
   }
 
   &--Apple {
-    background-position: 106px -4px;
+    background-image: url("../img/apple-logo.svg");
   }
 
   &--Android {
-    background-position: 159px 6px;
+    background-image: url("../img/android-logo.svg");
   }
 
   &--Windows {
-    background-position: 50px 9px;
+    background-image: url("../img/microsoft-logo.svg");
   }
 }
