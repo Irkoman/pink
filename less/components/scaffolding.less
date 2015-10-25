@@ -84,10 +84,19 @@ ul {
 .base-list {
   text-align: left;
 
+  @media all and (min-width: @screen_tablet) {
+    margin-top: -4px;
+    margin-bottom: 57px;
+  }
+
   &__item {
     margin: 27px 0;
     position: relative;
     padding-left: 21px;
+
+    @media all and (min-width: @screen_tablet) {
+      padding-left: 33px;
+    }
   }
 
   &__item::before {
@@ -113,8 +122,17 @@ ul {
   text-align: left;
   border-left: 2px solid @pink;
 
+  @media all and (min-width: @screen_tablet) {
+    padding-left: 33px;
+  }
+
   & blockquote {
     margin: 32px 0 5px;
+
+    @media all and (min-width: @screen_tablet) {
+      margin: 28px 0 0;
+      line-height: 1.7;
+    }
   }
 
   & cite {

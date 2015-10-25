@@ -4,6 +4,7 @@
 
   @media (min-width: @screen_tablet) {
     padding-top: 45px;
+    margin-bottom: 0;
   }
 
   @media (min-width: @screen_desktop) {
@@ -27,6 +28,7 @@
   line-height: (@line-height--base + 0.3);
 
   @media (min-width: @screen_tablet) {
+    margin-bottom: 27px;
     font-size: @font-size--big;
   }
 
@@ -38,11 +40,17 @@
     text-transform: uppercase;
 
     @media (min-width: @screen_tablet) {
+      margin-top: 10px;
+      margin-bottom: 14px;
       font-size: 1.5rem;
     }
   }
 
   &__text {
     margin-bottom: 6px;
+
+    @media (min-width: @screen_tablet) {
+      line-height: 1.75;
+    }
   }
 }
