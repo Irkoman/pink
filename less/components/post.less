@@ -1,11 +1,14 @@
 .post {
   .container();
+  margin-bottom: 43px;
+
+  @media (min-width: @screen_tablet) {
+    padding-top: 45px;
+  }
 
   @media (min-width: @screen_desktop) {
     max-width: 820px;
   }
-
-  margin-bottom: 43px;
 
   &__title {
     margin-top: 40px;

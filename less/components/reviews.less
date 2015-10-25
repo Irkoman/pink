@@ -1,24 +1,14 @@
 .reviews {
   position: relative;
-  padding-bottom: 163px;
-  margin-bottom: -40px;
   overflow: hidden;
-
-  &::after {
-    content: "";
-    position: absolute;
-    display: block;
-    bottom: -20px;
-    width: 170%;
-    height: 140px;
-    margin-top: 28px;
-    background: @bg--grey;
-    transform: rotate(-5deg);
-  }
 
   &__container {
     .container();
     padding-top: 28px;
+
+    @media (min-width: @screen_tablet) {
+      padding-top: 50px;
+    }
   }
 
   @media (min-width: @screen_desktop) {
@@ -37,6 +27,10 @@
 
   &__text {
     line-height: 2.1;
+
+    @media (min-width: @screen_tablet) {
+      line-height: @line-height--base;
+    }
   }
 
   &__info {
@@ -45,6 +39,7 @@
 
     @media (min-width: @screen_tablet) {
       display: block;
+      margin-top: 5px;
     }
 
     @media (min-width: @screen_desktop) {
@@ -77,6 +72,8 @@
 
     @media (min-width: @screen_tablet) {
       display: block;
+      margin-top: 32px;
+      margin-bottom: 0;
     }
   }
 }

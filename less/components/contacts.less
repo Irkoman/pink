@@ -8,6 +8,8 @@
 
     @media (min-width: @screen_tablet) {
       width: @width-container--tablet;
+      padding-top: 45px;
+      padding-bottom: 0;
     }
 
     @media (min-width: @screen_desktop) {
@@ -16,12 +18,11 @@
   }
 
   &__heading {
-
     margin-bottom: 24px;
 
     @media (min-width: @screen_tablet) {
       width: 500px;
-      margin: auto;
+      margin: 0 auto 35px;
     }
 
     @media (min-width: @screen_desktop) {
@@ -47,7 +48,15 @@
 
   @media (min-width: @screen_tablet) {
     width: 280px;
-    padding: 0 10px;
+    margin-bottom: 36px;
+  }
+
+  &:last-child {
+
+    @media (min-width: @screen_tablet) {
+      margin-bottom: 9px;
+  }
+
   }
 
   &__title {

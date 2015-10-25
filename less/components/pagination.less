@@ -16,7 +16,7 @@
     content: "Стр.";
     position: absolute;
     top: 17px;
-    left: -60px;
+    left: -64px;
     width: 45px;
     height: 25px;
     font-size: @font-size--big;
@@ -26,6 +26,13 @@
 
     @media all and (min-width: @screen_tablet) {
       display: block;
+    }
+  }
+
+  &--numeral {
+    @media all and (min-width: @screen_tablet) {
+      margin-top: 10px;
+      margin-bottom: 38px;
     }
   }
 
@@ -39,7 +46,7 @@
     box-sizing: border-box;
     margin-right: 10px;
     margin-bottom: 10px;
-    padding: 15px 22px;
+    padding: 15px 25px;
     font-size: @font-size--big;
     font-weight: (@font-weight--base + 300);
     text-transform: uppercase;

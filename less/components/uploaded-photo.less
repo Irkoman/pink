@@ -5,6 +5,11 @@
   font-size: 0;
   border-top: 2px solid #e7e7e7;
 
+  @media (min-width: @screen_tablet) {
+    padding-top: 67px;
+    margin-bottom: -35px;
+  }
+
   &__preview {
     display: inline-block;
     vertical-align: top;
@@ -17,6 +22,7 @@
     @media (min-width: @screen_tablet) {
       width: 24%;
       margin-right: 14%;
+      margin-bottom: 52px;
     }
 
     @media (min-width: 770px) {
@@ -60,8 +66,8 @@
     cursor: pointer;
 
     @media (min-width: @screen_tablet) {
-      top: -20px;
-      right: -20%;
+      top: -27px;
+      right: -23%;
       width: 52px;
       height: 52px;
     }
@@ -80,8 +86,8 @@
     transform: rotate(45deg);
 
     @media (min-width: @screen_tablet) {
-      top: -57px;
-      right: -13%;
+      top: -62px;
+      right: -15%;
       font-size: 60px;
     }
   }
@@ -94,6 +100,7 @@
 
     @media (min-width: @screen_tablet) {
       font-size: @font-size;
+      margin-top: 5px;
     }
   }
 }

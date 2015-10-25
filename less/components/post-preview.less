@@ -22,9 +22,18 @@
     color: @grey--dark;
 
     @media all and (min-width: @screen_tablet) {
+      margin-bottom: 10px;
       font-size: 1.6875rem;
       line-height: (@line-height--h2 - 0.2);
     }
+  }
+
+  &__link:hover {
+    text-decoration: underline;
+  }
+
+  &__link:active {
+    opacity: 0.3;
   }
 
   &__description {
@@ -32,6 +41,7 @@
     color: @grey--dark;
 
     @media all and (min-width: @screen_tablet) {
+
       font-size: @font-size--big;
       line-height: @line-height--base;
     }
@@ -51,12 +61,18 @@
   }
 }
 
+.post-preview--small {
+  @media all and (min-width: @screen_tablet) {
+    padding: 40px 0 42px;
+  }
+}
+
 .post-preview--small::before {
   display: none;
   content: "";
   position: absolute;
-  top: 21px;
-  left: -60px;
+  top: 45px;
+  left: -57px;
   width: 28px;
   height: 26px;
   background: url("../img/blog-post-icon.svg") center no-repeat;

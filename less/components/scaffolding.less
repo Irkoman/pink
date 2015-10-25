@@ -131,7 +131,14 @@ ul {
   color: @pink;
 
   @media all and (min-width: @screen_tablet) {
-    display: none;
+    margin-bottom: 24px;
+    font-size: @font-size;
+  }
+
+  &--upper {
+    @media all and (min-width: @screen_tablet) {
+      display: none;
+    }
   }
 
   &--lower {

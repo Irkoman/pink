@@ -2,12 +2,13 @@
 
   &__container {
     .container();
-    margin-top: -90px;
 
+    padding-top: 52px;
 
     @media (min-width: @screen_tablet) {
-      max-width: 300px;
-      margin-right: 3%;
+      width: 320px;
+      margin-right: 4.8%;
+      padding-top: 58px;
     }
 
     @media (min-width: @screen_desktop) {
@@ -22,21 +23,22 @@
   &__title {
     position: relative;
     padding-top: 25px;
-    padding-bottom: 167px;
-    margin-bottom: -40px;
-    overflow: hidden;
+    padding-bottom: 25px;
+
+    @media (min-width: @screen_tablet) {
+      padding-top: 50px;
+      padding-bottom: 60px;
+    }
   }
 
-  &__title::after {
-    content: "";
-    position: absolute;
-    display: block;
-    bottom: 0;
-    width: 170%;
-    height: 140px;
-    margin-top: 28px;
-    background: @bg--grey;
-    transform: rotate(-5deg);
+  &__heading {
+    margin-bottom: 20px;
+
+    @media (min-width: @screen_tablet) {
+      margin: 0 auto;
+      padding: 0;
+      line-height: 1.2;
+    }
   }
 
   &__heading:last-child {
@@ -46,7 +48,8 @@
 
   &__items {
     padding-top: 0;
-    background-color: @bg--grey;
+    background: @bg--grey url("../img/triangle-white.svg") center top no-repeat;
+    background-size: 100% auto;
 
     @media (min-width: @screen_tablet) {
       text-align: left;
@@ -56,39 +59,55 @@
 
 .features-item {
   position: relative;
-  max-width: 280px;
   padding: 10px 0 7px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 0;
+  margin-bottom: 5px;
 
-  &:last-child {
-    padding-bottom: 0;
-
-    @media (min-width: @screen_tablet) {
-      margin-bottom: 0;
-      padding-bottom: 45px;
-    }
-
-    @media (min-width: @screen_desktop) {
-      padding: 160px 0 0;
-    }
+  @media (min-width: @screen_tablet) {
+    margin-bottom: 15px;
+    padding-top: 0;
   }
 
   @media (min-width: @screen_desktop) {
     padding-top: 160px;
     text-align: center;
   }
+
+  &:last-child {
+    padding-bottom: 0;
+    margin-bottom: -3px;
+
+    @media (min-width: @screen_tablet) {
+      margin-bottom: 0;
+      padding-bottom: 28px;
+    }
+
+    @media (min-width: @screen_desktop) {
+      padding: 160px 0 0;
+    }
+  }
 }
 
 .features-item__title {
   margin-top: 15px;
   margin-bottom: 0;
+
+  @media (min-width: @screen_tablet) {
+    margin-top: 0;
+  }
 }
 
 .features-item__text {
   margin-top: 10px;
   margin-bottom: 0;
+
+  @media (min-width: @screen_tablet) {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-size: @font-size;
+    line-height: 1.7;
+  }
 }
 
 .features-item__image {
@@ -111,7 +130,7 @@
   @media (min-width: @screen_tablet) {
     position: absolute;
     bottom: 0;
-    left: -103%;
+    left: -307px;
     width: 268px;
     height: 481px;
     background-image: url("../img/iphone-screen-tablet-3@1x.png");

@@ -5,44 +5,54 @@
   color: @text--white;
   background-color: @bg--dark;
 
-
-  &__container {
-    .container();
-    max-width: 320px;
-    padding-top: 28px;
-    padding-bottom: 21px;
-  }
-
-  &__platforms {
-    width: 90%;
-    height: 56.753px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin: 31px auto 24px;
-    padding: auto;
-
-    @media (min-width: @screen_tablet) {
-      margin-top: 43px;
-      margin-bottom: 34px;
-    }
-  }
-
   @media (min-width: @screen_tablet) {
     font-size: @font-size--big;
     background: none;
   }
+
+  &__container {
+    .container();
+    padding-top: 28px;
+    padding-bottom: 21px;
+
+    @media (min-width: @screen_tablet) {
+      width: 300px;
+      padding: 5px 0;
+    }
+  }
+
+  &__description {
+
+    @media (min-width: @screen_tablet) {
+      width: 300px;
+      line-height: (@line-height--base - 0.2);
+    }
+  }
+
+  &__platforms {
+    height: 56.753px;
+    margin: 31px auto 24px;
+    padding: auto;
+
+    @media (min-width: @screen_tablet) {
+      margin-top: 45px;
+      margin-bottom: 34px;
+    }
+  }
 }
 
 .platform {
-
+  display: inline-block;
+  vertical-align: bottom;
   width: 46.21px;
   height: 56.753px;
-  margin-left: 17px;
-  margin-right: 17px;
-  background-position: center;
+  margin-right: 30px;
+  background-position: center bottom;
   background-repeat: no-repeat;
+
+  &:last-child {
+    margin-right: 0;
+  }
 
   &--Apple {
     background-image: url("../img/apple-logo.svg");
