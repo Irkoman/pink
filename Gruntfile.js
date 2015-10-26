@@ -17,8 +17,13 @@ module.exports = function(grunt) {
           cwd: "source",
           src: [
             "img/**",
+            "pictures/**",
             "js/**",
-            "index.html"
+            "css/**",
+            "index.html",
+            "form.html",
+            "blog.html",
+            "post.html"
           ],
           dest: "build"
         }]
