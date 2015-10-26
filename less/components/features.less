@@ -12,7 +12,7 @@
     }
 
     @media (min-width: @screen_desktop) {
-      max-width: @width-container--tablet;
+      width: @width-container--desktop;
       margin: auto;
       display: flex;
       flex-direction: row;
@@ -29,6 +29,11 @@
       padding-top: 50px;
       padding-bottom: 60px;
     }
+
+    @media (min-width: @screen_desktop) {
+      padding-top: 68px;
+      padding-bottom: 78px;
+    }
   }
 
   &__heading {
@@ -38,6 +43,10 @@
       margin: 0 auto;
       padding: 0;
       line-height: 1.2;
+    }
+
+    @media (min-width: @screen_desktop) {
+      font-size: 3.125rem;
     }
   }
 
@@ -70,7 +79,8 @@
   }
 
   @media (min-width: @screen_desktop) {
-    padding-top: 160px;
+    width: 300px;
+    padding-top: 293px;
     text-align: center;
   }
 
@@ -84,7 +94,7 @@
     }
 
     @media (min-width: @screen_desktop) {
-      padding: 160px 0 0;
+      padding: 293px 0 0;
     }
   }
 }
@@ -95,6 +105,13 @@
 
   @media (min-width: @screen_tablet) {
     margin-top: 0;
+  }
+
+  @media (min-width: @screen_desktop) {
+    width: 230px;
+    margin: 0 auto 20px;
+    font-size: 1.875rem;
+    line-height: 1.1;
   }
 }
 
@@ -107,6 +124,12 @@
     margin-bottom: 15px;
     font-size: @font-size;
     line-height: 1.7;
+  }
+
+  @media (min-width: @screen_desktop) {
+    width: 245px;
+    margin: 10px auto 15px;
+    font-size: @font-size--big;
   }
 }
 
@@ -143,8 +166,8 @@
 
   @media (min-width: @screen_desktop) {
     position: absolute;
-    top: -160px;
-    left: 0;
+    top: -108px;
+    left: 8px;
     width: 292px;
     height: 302px;
     background-size: 292px auto;

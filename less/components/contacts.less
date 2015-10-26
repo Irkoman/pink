@@ -14,6 +14,7 @@
 
     @media (min-width: @screen_desktop) {
       width: @width-container--desktop;
+      padding-top: 93px;
     }
   }
 
@@ -26,7 +27,8 @@
     }
 
     @media (min-width: @screen_desktop) {
-      margin-bottom: 50px;
+      margin-bottom: 47px;
+      font-size: 3.125rem;
     }
   }
 }
@@ -51,12 +53,25 @@
     margin-bottom: 36px;
   }
 
+  @media (min-width: @screen_desktop) {
+    margin-bottom: 0;
+  }
+
   &:last-child {
 
     @media (min-width: @screen_tablet) {
       margin-bottom: 9px;
+    }
+
+    @media (min-width: @screen_desktop) {
+      margin-bottom: 0;
+    }
   }
 
+  &--mail {
+    @media (min-width: @screen_desktop) {
+      order: 1;
+    }
   }
 
   &__title {
@@ -64,6 +79,10 @@
     margin-bottom: 0;
     font-size: @font-size--h2;
     font-weight: (@font-weight--base + 300);
+
+    @media (min-width: @screen_desktop) {
+      margin-bottom: 20px;
+    }
   }
 
   &__contact {
@@ -71,6 +90,10 @@
     font-size: @font-size--h1;
     font-weight: (@font-weight--base - 100);
     color: @pink;
+
+    @media (min-width: @screen_desktop) {
+      margin-bottom: 0;
+    }
   }
 }
 

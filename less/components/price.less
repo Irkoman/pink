@@ -4,9 +4,12 @@
   background-color: ;
   text-transform: uppercase;
   overflow: hidden;
-
   background: @bg--grey url("../img/triangle-white.svg") center top no-repeat;
   background-size: 100% auto;
+
+  @media (min-width: @screen_desktop) {
+    padding-top: 114px;
+  }
 }
 
 .price-table {
@@ -40,6 +43,11 @@
       padding-top: 8px;
       padding-bottom: 8px;
     }
+
+    @media (min-width: @screen_desktop) {
+      padding-top: 11px;
+      padding-bottom: 11px;
+    }
   }
 
   &__title {
@@ -56,6 +64,11 @@
     @media (min-width: @screen_tablet) {
       font-size: @font-size--big;
       line-height: 0.8;
+    }
+
+    @media (min-width: @screen_desktop) {
+      font-size: @font-size--h1;
+      line-height: 1;
     }
   }
 
@@ -91,6 +104,13 @@
     padding-top: 11px;
     padding-left: 15px;
     padding-bottom: 11px;
+  }
+
+  @media (min-width: @screen_tablet) {
+    background-position: 50% 50%;
+    padding-top: 15px;
+    padding-left: 19px;
+    padding-bottom: 15px;
   }
 
   &--yes {

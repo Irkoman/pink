@@ -134,6 +134,11 @@
     font-size: @font-size;
   }
 
+  @media (min-width: @screen_desktop) {
+    width: 160px;
+    font-size: @font-size--big;
+  }
+
   &__text {
     display: inline-block;
     vertical-align: middle;
@@ -143,6 +148,10 @@
     display: inline-block;
     vertical-align: middle;
     margin-left: 12px;
+
+    @media (min-width: @screen_desktop) {
+      margin-left: 9px;
+    }
   }
 
   &__logo {

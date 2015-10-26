@@ -6,8 +6,12 @@
   border-top: 2px solid #e7e7e7;
 
   @media (min-width: @screen_tablet) {
-    padding-top: 67px;
     margin-bottom: -35px;
+    padding-top: 67px;
+  }
+
+  @media (min-width: @screen_desktop) {
+    margin-bottom: 0;
   }
 
   &__preview {
@@ -28,6 +32,10 @@
     @media (min-width: 770px) {
       width: 14.3902439%;
       margin-right: 7%;
+    }
+
+    @media (min-width: @screen_desktop) {
+      margin-bottom: 31px;
     }
   }
 

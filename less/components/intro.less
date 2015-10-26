@@ -1,7 +1,7 @@
 .intro {
 
   @media (min-width: @screen_tablet) {
-    background-color: @bg--dark;
+    background-color: @bg--dark, @bg--dark;
     background-image: url("../img/iphone-hand-tablet@1x.png"), url("../img/background-tablet@1x.jpg");
     background-position: center bottom, center top;
     background-repeat: no-repeat, no-repeat;
@@ -13,8 +13,8 @@
   }
 
   @media (min-width: @screen_desktop) {
-    background-color: @bg--dark;
-    background-position: center bottom, center top;
+    background-color: @bg--dark, @bg--dark;
+    background-position: 97% bottom, center top;
     background-repeat: no-repeat, no-repeat;
     background-image: url("../img/iphone-hand-desktop@1x.png"), url("../img/background-fullsize.jpg");
     background-size: 1050px auto, cover;
@@ -34,6 +34,12 @@
       align-items: flex-start;
       padding: 182px 0 94px;
     }
+
+    @media (min-width: @screen_tablet) {
+      padding: 199px 0 94px;
+    }
   }
+
+
 }
 
