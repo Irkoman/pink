@@ -9,4 +9,4 @@ prepros.cfg
 *.map
 css/*.css
 .gosha/
-gosha/
+/css
