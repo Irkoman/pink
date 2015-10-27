@@ -98,8 +98,8 @@ module.exports = function(grunt) {
   grunt.initConfig(config);
 
   grunt.registerTask("build", [
-    "clean",
-    "copy",
+    "clean:build",
+    "copy:build",
     "less",
     "cmq",
     "postcss",
