@@ -1,4 +1,3 @@
-/build
 node_modules/
 bower_components/
 *.log
@@ -8,5 +7,6 @@ prepros.cfg
 *.sublime*
 *.map
 css/*.css
-.gosha/
 /css
+gosha/
+build/
