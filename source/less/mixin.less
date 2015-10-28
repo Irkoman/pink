@@ -1,0 +1,23 @@
+.clearfix {
+
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+.container {
+  width: @width-container;
+  max-width: 940px;
+  margin-right: auto;
+  margin-left: auto;
+
+  @media (min-width: @screen_tablet) {
+    width: @width-container--tablet;
+  }
+
+  @media (min-width: @screen_desktop) {
+    width: @width-container--desktop;
+  }
+}

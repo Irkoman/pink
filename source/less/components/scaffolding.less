@@ -1,0 +1,176 @@
+html {
+  font-size: @html-size--base;
+}
+
+body {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  font-family: @font-family--base;
+  font-size: @font-size;
+  line-height: @line-height--base;
+  background-color: @bg--white;
+  color: @grey--dark;
+
+  @media (min-width: @screen_tablet) {
+    font-size: @font-size--big;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+h1 {
+  margin-top: 20px;
+  padding-bottom: 9px;
+  font-size: @font-size--h1;
+  font-weight: (@font-weight--base - 100);
+  line-height: @line-height--h1;
+
+  @media (min-width: @screen_tablet) {
+    font-size: 2.5rem;
+  }
+}
+
+h2 {
+  font-size: @font-size--h2;
+  color: #000000;
+
+  @media (min-width: @screen_desktop) {
+    font-size: 1.875rem;
+  }
+}
+
+a {
+  color: @pink;
+  text-decoration: none;
+}
+
+.base-link {
+  font-weight: 400;
+  color: @pink;
+  text-decoration: underline;
+
+  &:hover {
+    color: @grey--dark;
+    text-decoration: underline;
+  }
+
+  &:active {
+    color: rgba(40, 54, 69, 0.3);
+  }
+}
+
+legend,
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.base-list {
+  text-align: left;
+
+  @media all and (min-width: @screen_tablet) {
+    margin-top: -4px;
+    margin-bottom: 57px;
+  }
+
+  &__item {
+    margin: 27px 0;
+    position: relative;
+    padding-left: 21px;
+
+    @media all and (min-width: @screen_tablet) {
+      padding-left: 33px;
+    }
+  }
+
+  &__item::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 0px;
+    display: block;
+    width: 6px;
+    height: 6px;
+    background-color: @pink;
+    border-radius: 100%;
+
+    @media all and (min-width: @screen_tablet) {
+      top: 15px;
+    }
+  }
+}
+
+.base-blockquote {
+
+  padding-left: 19px;
+  text-align: left;
+  border-left: 2px solid @pink;
+
+  @media all and (min-width: @screen_tablet) {
+    padding-left: 33px;
+  }
+
+  & blockquote {
+    margin: 32px 0 5px;
+
+    @media all and (min-width: @screen_tablet) {
+      margin: 28px 0 0;
+      line-height: 1.7;
+    }
+  }
+
+  & cite {
+    font-style: italic;
+    color: @grey--light;
+  }
+}
+
+.date {
+  display: block;
+  margin-bottom: 17px;
+  font-size: @font-size--small;
+  text-transform: uppercase;
+  color: @pink;
+
+  @media all and (min-width: @screen_tablet) {
+    margin-bottom: 24px;
+    font-size: @font-size;
+  }
+
+  &--upper {
+    @media all and (min-width: @screen_tablet) {
+      display: none;
+    }
+  }
+
+  &--lower {
+    display: none;
+    position: relative;
+    width: 300px;
+    margin: auto;
+    text-align: center;
+    font-size: @font-size;
+    background: @bg--white;
+    z-index: 15;
+
+    @media all and (min-width: @screen_tablet) {
+      display: block;
+    }
+  }
+}

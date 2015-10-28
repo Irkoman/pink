@@ -1,0 +1,131 @@
+.uploaded-photo {
+  width: 100%;
+  padding-top: 37px;
+  text-align: left;
+  font-size: 0;
+  border-top: 2px solid #e7e7e7;
+
+  @media (min-width: @screen_tablet) {
+    margin-bottom: -35px;
+    padding-top: 67px;
+  }
+
+  @media (min-width: @screen_desktop) {
+    margin-bottom: 0;
+  }
+
+  &__preview {
+    display: inline-block;
+    vertical-align: top;
+    width: 23.57%;
+    margin-right: 14.285%;
+    margin-bottom: 26px;
+    text-align: left;
+    font-size: @font-size;
+
+    @media (min-width: @screen_tablet) {
+      width: 24%;
+      margin-right: 14%;
+      margin-bottom: 52px;
+    }
+
+    @media (min-width: 770px) {
+      width: 14.3902439%;
+      margin-right: 7%;
+    }
+
+    @media (min-width: @screen_desktop) {
+      margin-bottom: 31px;
+    }
+  }
+
+  &__preview:nth-child(3n) {
+    margin-right: 0;
+
+    @media (min-width: 770px) {
+      margin-right: 7%;
+    }
+  }
+
+  &__preview:nth-child(5n) {
+
+    @media (min-width: 770px) {
+      margin-right: 0;
+    }
+  }
+
+  &__delete {
+    position: relative;
+    display: block;
+  }
+
+  &__delete::before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: -12px;
+    right: -15px;
+    width: 29px;
+    height: 29px;
+    border: 2px solid #e5e5e5;
+    border-radius: 50%;
+    background: @bg--white;
+    z-index: 50;
+    cursor: pointer;
+
+    @media (min-width: @screen_tablet) {
+      top: -27px;
+      right: -23%;
+      width: 52px;
+      height: 52px;
+    }
+  }
+
+  &__delete::after {
+    content: "+";
+    position: absolute;
+    top: -28px;
+    right: -7px;
+    font-size: 30px;
+    font-family: @font-family--base;
+    font-weight: 300;
+    color: #c1c1c1;
+    z-index: 70;
+    transform: rotate(45deg);
+
+    @media (min-width: @screen_tablet) {
+      top: -62px;
+      right: -15%;
+      font-size: 60px;
+    }
+  }
+
+  &__caption {
+    font-size: @font-size--small;
+    text-transform: uppercase;
+    line-height: 1;
+    text-align: left;
+
+    @media (min-width: @screen_tablet) {
+      font-size: @font-size;
+      margin-top: 5px;
+    }
+  }
+}
+
+.uploaded-photo__delete:hover::before {
+  border-color: @grey--dark;
+}
+
+.uploaded-photo__delete:hover::after{
+  color: #333333;
+}
+
+.uploaded-photo__delete:active::before {
+  border-color: @grey--dark;
+  background: @grey--dark;
+}
+
+.uploaded-photo__delete:active::after {
+  color: @text--white;
+}
