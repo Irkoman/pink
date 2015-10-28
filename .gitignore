@@ -7,6 +7,4 @@ prepros.cfg
 *.sublime*
 *.map
 css/*.css
-/css
-gosha/
 build/
