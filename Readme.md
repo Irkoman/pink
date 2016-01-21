@@ -1,5 +1,7 @@
 # Проект «Пинк»
 
+<a href="http://irkoman.github.io/pink/" target="_blank">http://irkoman.github.io/pink/</a>
+
 Ирина Смирнова (https://htmlacademy.ru/profile/id38472)
 
 * BEM;
