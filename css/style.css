@@ -225,21 +225,18 @@ ul {
 	background-image: linear-gradient(#d22856 16%, rgba(255, 255, 255, 0) 16%, rgba(255, 255, 255, 0) 44%, #d22856 44%, #d22856 60%, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 0) 84%, #d22856 84%, #d22856 100%);
 }
 
-.toggler--close::before {
-	content: "+";
-	position: absolute;
-	top: -45px;
-	right: -10px;
-	font-size: 70px;
+.toggler--close {
+	width: 25px;
+	height: 25px;
+	font-size: 50px;
+	line-height: 25px;
 	font-family: "Open Sans", "Helvetica", "Arial", sans-serif;
 	font-weight: 300;
 	color: #ffffff;
 	z-index: 70;
-	-webkit-transform: rotate(45deg);
-	        transform: rotate(45deg);
 }
 
-.toggler--close:hover::before {
+.toggler--close:hover {
 	color: #d22856;
 }
 
@@ -1744,13 +1741,8 @@ h1 {
 	margin-top: 10px;
 }
 
-.toggler--close::before {
-	top: -30px;
-	right: 0;
-}
-
 .intro {
-	background-color: #1d2631, #1d2631;
+	background-color: #1d2631;
 	background-image: url("../img/iphone-hand-tablet@1x.png"), url("../img/background-tablet@1x.jpg");
 	background-position: center bottom, center top;
 	background-repeat: no-repeat, no-repeat;
