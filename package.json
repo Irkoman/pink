@@ -1,17 +1,17 @@
 {
-  "name": "38472-pink",
+  "name": "pink",
   "version": "0.1.0",
   "private": true,
-  "description": "Обучающий проект «pink» от HTML Academy",
+  "description": "Личный проект на продвинутом интенсиве HTML Academy",
   "author": "Ирина Смирнова",
   "repository": {
     "type": "git",
-    "url": "git://github.com/up-htmlacademy/38472-pink.git"
+    "url": "git://github.com/Irkoman/pink.git"
   },
   "bugs": {
-    "url": "https://github.com/up-htmlacademy/38472-pink/issues"
+    "url": "https://github.com/Irkoman/pink/issues"
   },
-  "homepage": "https://github.com/up-htmlacademy/38472-pink",
+  "homepage": "https://github.com/Irkoman/pink",
   "dependencies": {
     "autoprefixer": "6.0.x",
     "grunt": "0.4.x",
@@ -22,7 +22,8 @@
     "grunt-lintspaces": "0.7.x",
     "grunt-postcss": "0.6.x",
     "husky": "0.10.x",
-    "load-grunt-tasks": "3.2.x"
+    "load-grunt-tasks": "3.2.x",
+    "lodash": "^4.0.1"
   },
   "main": "Gruntfile.js",
   "scripts": {
@@ -35,8 +36,20 @@
     "node": "^0.12.7"
   },
   "devDependencies": {
+    "autoprefixer": "^6.0.3",
+    "grunt": "^0.4.5",
     "grunt-combine-media-queries": "^1.0.19",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-copy": "^0.8.2",
     "grunt-contrib-cssmin": "^0.14.0",
-    "grunt-contrib-imagemin": "^0.9.4"
+    "grunt-contrib-imagemin": "^1.0.0",
+    "grunt-contrib-jshint": "^0.12.0",
+    "grunt-contrib-less": "^1.0.1",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-lintspaces": "^0.7.2",
+    "grunt-postcss": "^0.6.0",
+    "imagemin": "^4.0.0",
+    "load-grunt-tasks": "^3.2.0",
+    "vinyl-fs": "^2.3.1"
   }
 }
