@@ -97,7 +97,7 @@ module.exports = function(grunt) {
 
   grunt.initConfig(config);
 
-  grunt.registerTask("build", [
+  grunt.registerTask("default", "build", [
     "clean:build",
     "copy:build",
     "less",
